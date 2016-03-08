@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Japan Virtual Robotics Challenge(JVRC)</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="keywords" content="Japan Virtual Robotics Challenge,JVRC,NEDO," />
+<meta name="description" content="'Japan Virtual Robotics Challenge' (JVRC for short) is a competition of disaster response robots by computer simulations. It will be held as a part of 'R & D project on Disaster-response Robots' by New Energy and Industrial Technology Development Organization (NEDO)." />
+
+<link rel="shortcut icon" href="../images/favicon.ico" />
+
+<link href="../css/import.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+
+<!--アコーディオンメニュー-->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+　$("#faq .question").on("click", function() {
+　　$(this).next().slideToggle(200);
+　});
+});
+</script>
+
+</head>
+<body>
+
+
+<div id="page">
+
+<div id="header">
+<div class="imgArea">
+<a href="index.html"><img src="../images/en/img-main.png" alt="" width="1115" height="313" /></a>
+
+<div class="english"><a href="../faq.html"><img src="../images/ja_flag.png" alt="Japan" width="22" height="14" />Japanese</a>
+</div><!--/ english-->
+
+</div><!-- / #imgArea-en -->
+</div><!-- / #header -->
+
+
+<div id="navi">
+<ul id="dropmenu-en">
+<li><a href="index.html">TOP&nbsp;<img src="../images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="about.html">About JVRC</a></li>
+  </ul>
+</li>
+<li><a href="rule.html">Rule&nbsp;<img src="../images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="tech-guide.html">Technical Guide</a></li>
+  </ul>
+</li>
+<li><a href="http://jvrc.github.com/tutorials/html/index.html" target="_blank">Tutorial</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="result.html">Result</a></li>
+<li class="current-page"><a href="faq.html">FAQs</a></li>
+<li><a href="https://jvrc.org/en/ssl/contact.html"><img src="../images/inquiry-icon.png" alt="" width="22" height="16" />&nbsp;Contact Us&nbsp;<img src="../images/sankaku.png" alt="" width="8" height="6" /></a>
+  <ul>
+  <li><a href="https://jvrc.org/en/ssl/etr.html"><img src="../images/sanka-icon.png" alt="" width="26" height="21" />&nbsp;Application</a></li>
+  </ul>
+</li>
+</ul>
+<!-- / #navi --></div>
+
+
+<div id="faq01"></div>
+<div id="contents" class="clearfix">
+<div id="main">
+
+<h2>FAQs&nbsp;&nbsp;<span class="f-12">Please click on the question, the answer will appear.</span></h2>
+<div class="section">
+<h6>1. Operation</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　Can the operator use the birds-eye view from the simulator?</div>
+<div class="answer">No, the operator can use only information from the sensors installed on the robot.</div>
+</div><!--/faq-->
+<div id="faq02"></div>
+<br /><br />
+
+
+<h6>2. Robot model</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　Can a team use an original robot model developed by the team?  If so, the robot that scores a lot of points but is unrealistic will be participated to JVRC.</div>
+<div class="answer">The team can use a robot model either provided by the JVRC organizer or developed by the team. Reality of the robot model is screened by the document examination.</div>
+
+<!--Q2-->
+<div class="question"><span>Q</span>　When a team install the attachments such as the sensors to the robot model, the location and the numbers are limited?</div>
+<div class="answer">The location and the numbers of the robot attachments are not limited if they are realistic.</div>
+
+</div><!--/faq-->
+<div id="faq03"></div>
+<br /><br />
+
+
+
+<h6>3. Contest</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　Are the field models available beforehand?</div>
+<div class="answer">Yes. The models are provided beforehand. The date of the provision is announced separately.</div>
+
+<!--Q2-->
+<div class="question"><span>Q</span>　Do the specifications and the decode software of the QR codes are available beforehand?</div>
+<div class="answer">QThe specifications of the QR codes are provided beforehand. The date of the provision is announced separately. The decode software is not provided.</div>
+    
+<!--Q3-->
+<div class="question"><span>Q</span>　Which elapse time is used for scoring, real one or simulation one?</div>
+<div class="answer">The elapse time in simulation is used for scoring.</div>
+
+</div><!--/faq-->
+<div id="faq04"></div>
+<br /><br />
+
+
+
+<h6>4. Available software</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　What software module is provided by the organizer? What module is developed by the team?</div>
+<div class="answer">The organizer provides a simulation software "Choreonoid" and models of 
+the robots and the tasks. The teams need to develop a control software.
+</div>
+
+</div><!--/faq-->
+<div id="faq05"></div>
+<br /><br />
+
+
+<h6>5. Task O1</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　How many targets locate in the task? Can team know the number of the targets beforehand?</div>
+<div class="answer">The number of the targets is provided beforehand. The date of the provision is announced separately.</div>
+
+<!--Q2-->
+<div class="question"><span>Q</span>　Is the location of the targets reported from the origin?</div>
+<div class="answer">Yes. The location of the targets should be reported from the origin.</div>
+
+</div><!--/faq-->
+<div id="faq06"></div>
+<br /><br />
+
+
+<h6>6. Task O2</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　Does the robot start on the scaffolding?</div>
+<div class="answer">Yes. The robot starts on the scaffolding.</div>
+
+</div><!--/faq-->
+<div id="faq07"></div>
+<br /><br />
+
+
+<h6>7. Task R1</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　What is the interface of the vehicles already available in the field, e.g., a gas pedal, a brake pedal, and a handle?</div>
+<div class="answer">Yes.</div>
+
+</div><!--/faq-->
+<div id="faq08"></div>
+<br /><br />
+
+
+<h6>8. Task R2</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　Are the all combinations of ‘M’, ‘L’, ‘s’, and ‘u’ used for the conditions and specifications of the field?</div>
+<div class="answer">Any of the combinations of ‘M’, ‘L’, ‘s’, and ‘u’ are used. The combinations are announced separately.</div>
+
+<!--Q2-->
+<div class="question"><span>Q</span>　What is “3D information describing the vehicles' qualitative condition”? For example, is a 3D mesh model OK?</div>
+<div class="answer">Any 3D model that a human (judge) can understand is considered to describe the qualitative condition. A 3D mesh model with reasonable mesh size is OK.</div>
+
+</div><!--/faq-->
+<div id="faq09"></div>
+<br /><br />
+
+
+<h6>9. Task R4</h6>
+<div id="faq">
+<div class="question"><span>Q</span>　Are the specifications of the tools, e.g., location of spreader switch, available beforehand?</div>
+<div class="answer">Yes. The specifications of the tools are provided beforehand. The specifications are announced separately.</div>
+</div><!--/faq-->
+
+</div><!--section-->
+
+</div><!-- / #main -->
+
+
+<div id="sub">
+<div class="alpha MG-B10"><a href="https://www.facebook.com/jvrcorg" target="_blank"><img src="../images/en/facebook_en.png" width="176" height="145" alt="facebook-JVRC" /></a></div>
+
+<div class="alpha"><a href="https://jvrc.org/bbs/light.cgi" target="_blank"><img src="../images/en/forum.png" width="176" height="135" alt="The forum of information exchange for JVRC." /></a></div>
+
+
+<h3>FAQs</h3>
+<ul>
+<li><a href="#faq01">1. Operation</a></li>
+<li><a href="#faq02">2. Robot model</a></li>
+<li><a href="#faq03">3. Contest</a></li>
+<li><a href="#faq04">4. Available software</a></li>
+<li><a href="#faq05">5. Task O1</a></li>
+<li><a href="#faq06">6. Task O2</a></li>
+<li><a href="#faq07">7. Task R1</a></li>
+<li><a href="#faq08">8. Task R2</a></li>
+<li><a href="#faq09">9. Task R4</a></li>
+</ul>
+
+
+</div><!-- / #sub -->
+
+</div><!-- / #contents -->
+
+
+<div class="pageTop alpha">
+<a href="#"><img src="../images/go-top.png" alt="to TOP" width="88" height="38" /></a></div>
+
+<div id="footer">
+<div class="alpha sponsor2">
+<table>
+<tr>
+<td>
+Organizers：<a href="http://www.nedo.go.jp/english/index.html" target="_blank"><img src="../images/nedo-logo.png" alt="New Energy and Industrial Technology Development Organization" width="60" height="31"/></a></td>
+<td>New Energy and Industrial Technology <br />
+Development Organization</td>
+<td class="space">&nbsp;</td>
+<td>Co-Organizer：<a href="http://www.meti.go.jp/english/index.html" target="_blank"><img src="../images/keizai-logo.png" alt="Ministry of Economy, Trade and Industry" width="111" height="33" /></a></td>
+<td>Ministry of Economy, <br />
+Trade and Industry</td>
+</tr>
+</table>
+</div>
+<div class="copyright">Copyright &copy; 2015 Japan Virtual Robotics Challenge. All Rights Reserved.</div>
+<!-- / #footer --></div>
+
+<!-- / #page --></div>
+
+</body>
+</html>

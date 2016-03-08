@@ -1,0 +1,888 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Japan Virtual Robotics Challenge(JVRC)</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="keywords" content="Japan Virtual Robotics Challenge,JVRC,NEDO," />
+<meta name="description" content="'Japan Virtual Robotics Challenge' (JVRC for short) is a competition of disaster response robots by computer simulations. It will be held as a part of 'R & D project on Disaster-response Robots' by New Energy and Industrial Technology Development Organization (NEDO)." />
+
+<link rel="shortcut icon" href="../images/favicon.ico" />
+
+<link href="../css/import.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+
+<!--ZOOM-->
+<script src="../js/FancyZoom_en.js" type="text/javascript"></script>
+<script src="../js/FancyZoomHTML.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+$(function(){ 
+$('.zoom a img').before('<img src="../images/zoom/zoom_icon.png" alt="image" width="23" height="21" class="zoom_icon" />'); 
+}) 
+</script> 
+<!--/ZOOM-->
+</head>
+<body onload="setupZoom()">
+
+
+<div id="page">
+
+<div id="header">
+<div class="imgArea">
+<a href="index.html"><img src="../images/en/img-main.png" alt="" width="1115" height="313" /></a>
+
+<div class="english"><a href="../rule.html"><img src="../images/ja_flag.png" alt="Japan" width="22" height="14" />Japanese</a>
+</div><!--/ english-->
+
+</div><!-- / #imgArea-en -->
+</div><!-- / #header -->
+
+
+<div id="navi">
+<ul id="dropmenu-en">
+<li><a href="index.html">TOP&nbsp;<img src="../images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="about.html">About JVRC</a></li>
+  </ul>
+</li>
+<li class="current-page"><a href="rule-old.html">Rule&nbsp;<img src="../images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="tech-guide.html">Technical Guide</a></li>
+  </ul>
+</li>
+<li><a href="http://jvrc.github.com/tutorials/html/index.html" target="_blank">Tutorial</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="result.html">Result</a></li>
+<li><a href="faq.html">FAQs</a></li>
+<li><a href="https://jvrc.org/en/ssl/contact.html"><img src="../images/inquiry-icon.png" alt="" width="22" height="16" />&nbsp;Contact Us&nbsp;<img src="../images/sankaku.png" alt="" width="8" height="6" /></a>
+  <ul>
+  <li><a href="https://jvrc.org/en/ssl/etr.html"><img src="../images/sanka-icon.png" alt="" width="26" height="21" />&nbsp;Application</a></li>
+  </ul>
+</li>
+</ul>
+<!-- / #navi --></div>
+
+
+<div id="contents" class="clearfix">
+<div id="main">
+
+<div class="en-h2">1. Introduction: Background for the development of<br />
+　 the JRVC  competition tasks</div>
+<div class="section">
+<p>　The tunnel disaster was chosen as a scenario for the development of the JRVC  (Japan Virtual Robotics Challenge) competition tasks.  <br />
+  <br />
+<img src="../images/rule/tunnel.jpg" alt="トンネル" width="289" height="191" class="imgR" />　In Japan, the social  infrastructures developed during the rapid growth period will become 50 years old  after 20 years from now. Appropriate maintenance is necessary to avoid a huge   impact on human life and society by collapse or failure of the social infrastructures.  However, aging maintenance workers and a lack of skill transfer to younger workers  would cause many problems of infrastructure maintenance in Japan.  Though periodic inspections of major infrastructure are conducted every few  years, this frequency would not be enough to ensure the detection of abnormalities  such as rapid deterioration. In addition, there are some areas where it is difficult to  inspect visually. During a disaster, rapid restoration is hard to achieve due to the  amount of time required to conduct emergency inspection of the social  infrastructures. In 2014, these circumstances led to the formation of collaboration  between the Ministry of Land, Infrastructure, Transport and Tourism, and the  Ministry of Economy, Trade and Industry. This resulted in a research and  development project to promote the application of robots to social infrastructure,  called &ldquo;Investigation and Evaluation Project of Robots for Next-Generation Social  Infrastructure&rdquo;. The &ldquo;NEDO 2014 White Paper on Robotics&rdquo; also lists the field  robotics application such as infrastructure, civil engineering, disaster response and  agriculture. <br />
+  With aging social infrastructure, robot technology can be effective in sites  inaccessible to humans. Such capabilities are similar to those required in the  disaster response robots<span class="f-12 TXT-RED">(※1)　</span>。According to the probability of tunnel accidents a  year<span class="f-12 TXT-RED">(※2)</span>, the application of response robot technology to frequently-used  maintenance robots for infrastructure enables the social implementation of the  response robots. <br />
+<br />
+   Especially, search robots with monitoring technology in confined areas should be  developed intensively, because they also can be used in disaster situation for hazard  inspection of confined areas such as under debris, among and within piping and  bridges. 
+<br />
+<br />
+<table>
+<tr>
+<td width="38" valign="top"><span class="f-12 TXT-RED">(※1)</span></td>
+<td width="686"><span class="f-12">The 2012 Report of Council on Competitiveness Nippon (COCN) &rdquo;Robot
+technology used at disaster sites and its operating system&rdquo;
+
+</span></td>
+</tr>
+<tr>
+<td valign="top"><span class="f-12 TXT-RED">(※2) </span></td>
+<td><span class="f-12">Appendix 4-1 &ldquo;Subdivisions of future disaster and robot (building and civil  engineering infrastructure disaster): Nationwide occurrence frequency and  scale&rdquo; in 2013 COCN Report &ldquo;Establishment plan for a disaster response  robot center&rdquo;</span></td>
+</tr>
+</table>
+<div id="r2"></div>
+</p>
+</div><!--section-->
+
+
+<h2>2. <strong>Scenario</strong></h2>
+<div class="section">
+<p>  The scenario is set within a tunnel for two way traffic in the mountainous area.  The curved tunnel extends for 700m. The disaster scenario is as follows: an  earthquake caused the collapse of the tunnel wall, which fell on moving vehicles,  causing a crash followed by a multiple pileup of following vehicles. Affected vehicles  include a tanker and a large truck. The tanker overturned and the truck scattered its  load across the roadway. Some victims remain trapped in their vehicles. <br />
+<br />
+<img src="../images/rule/Task_R1_s.png" alt="" width="740" height="143" /><br />
+<table class="center">
+<tr>
+<td><img src="../images/rule/R4/A/Task_R4_A_3.jpg" alt="" width="350" height="177" class="MG-R10" /></td>
+<td><img src="../images/rule/R3/A/Task_R3_A_4.jpg" alt="" width="350" height="177" class="gray-frame-02"  /></td>
+</tr>
+</table>
+<div id="r3"></div> 
+</p>
+</div><!--section-->
+
+
+
+
+<h2>3．<strong>Equivalent Tasks</strong></h2>
+<div class="section">
+<p>　In the actual inspection tasks, visual inspection is often used and hammering test is  also used, and the latter is difficult to computer simulate accurately. When a robot  performs the hammering test, the basic task is to maintain the robot end-effector at  the specified position and direction relative to the test object. Instead of simulating  the hammering test, the simulator replicates a more feasible &ldquo;equivalent task&rdquo; to  evaluate the same basic technology. </p>
+<table class="MG-T20">
+<tr>
+<td class=" square-blue"><p>Equivalent tasks in the JVRC are  defined as visual inspection of  &ldquo;targets&rdquo; consisting of QR codes  and pipes. The size of QR codes and  the length of pipes is one of the  followings: </p></td>
+<td>
+<img src="../images/rule/Task_R2_L_3_s.png" alt="QRコードとパイプで構成される「ターゲット」" width="250" height="126" class="imgR" />
+</td>
+</tr>
+</table>
+
+<table class="t-04 MG-T10 MG-B30 ">
+<tr>
+<th scope="row">The width of QR code (corresponding diameter =  diagonal dimension of QR code)</th>
+<td>140mm(200mm)、 35mm(50mm)、 7mm(10mm)</td>
+</tr>
+<tr>
+<th scope="row">The  length of pipe</th>
+<td>100mm、50mm、0mm</td>
+</tr>
+</table>
+
+<div class="square-pale-yerrow" ><span class="TXT-RED">※Reference:  Target's &ldquo;field of view&rdquo; (angle to see the entire QR code at the bottom of a  pipe)</span>
+<table class="t-04 MG-T10 center">
+  <tr>
+<th colspan="2" scope="col">&nbsp;</th>
+<th colspan="3" scope="col">　　　　QR  code width（corresponding  pipe diameter）</th>
+</tr>
+<tr>
+<th colspan="2" scope="row">&nbsp;</th>
+<td width="25%" class="bold">140mm(200mm)</td>
+<td width="23%" class="bold">35mm(50mm)</td>
+<td width="21%" class="bold">7mm(10mm)</td>
+</tr>
+<tr>
+<th width="18%" rowspan="2" scope="row">　Pipe length</th>
+<td width="13%" class="bold">100mm</td>
+<td>90&deg;</td>
+<td>30&deg;</td>
+<td>6&deg;</td>
+</tr>
+<tr>
+<td class="bold">50mm</td>
+<td>126&deg;</td>
+<td>52&deg;</td>
+<td>12&deg;</td>
+</tr>
+</table>
+</div>
+<div id="r4"></div> 
+</div><!--section-->
+
+
+<h2>４．<strong>Competition  Task</strong></h2>
+<div class="section">
+<p class="MG-B10">The basic competition procedure is as follows:</p>
+<table class="t-04">
+<tr>
+<th width="49" valign="top" scope="row"><span class="num">１</span></th>
+<td valign="top">Several &ldquo;gates&rdquo;, which consist of a &ldquo;blue pole&rdquo; and a  &ldquo;red pole&rdquo;, are placed to indicate the path for a robot  to take in the field. A robot needs to pass the gate  with the blue pole on the left. </td>
+<td><img src="../images/rule/Task_R3_A_2_s.png" alt="" width="120" height="100" class="gray-frame-02" /></td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">２</span></th>
+<td valign="top">On top of the pole at each gate, there is a flag with a  gate number. The robot needs to pass each gate in a  numerical order. </td>
+<td><img src="../images/rule/TaskR1-3_s.png" alt="" width="120" height="100"  class="gray-frame-02" /></td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">３</span></th>
+<td colspan="2" valign="top">Passing the gate is complete when the entire robot passes through the gate. </td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">４</span></th>
+<td colspan="2" valign="top">The robot waits behind the start line before the competition starts. The start  line is drawn between the poles with the gate number 1. The robot must not  go beyond the line until the start time. </td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">５</span></th>
+<td colspan="2" valign="top">After the signal to start is given, the robot can go beyond the start line to  perform a task. </td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">６</span></th>
+<td colspan="2" valign="top">The task is over when the robot passes the end line, or exceeds the time  limit. The end line is the line between the poles with the largest gate number. </td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">７</span></th>
+<td colspan="2" valign="top">The origin in each field is located in the middle of the start line, indicated by  an identifiable marker. </td>
+</tr>
+</table>
+
+<p class="MG-T20">
+<span class="TXT-ORG bold">The following code is used for each competition task.</span><br />
+<span class="bold">（ task  category code ＋ task number ）_（ field  condition ) </span><br /><br />
+ex: R2-1_M-s　→　condition  outside of a standard car in normal condition
+<div id="r4-1-1"></div> 
+</p>
+</div><!--section-->
+
+
+
+<h2>4-1.Ordinary  task (task category code: O)</h2>
+<h4>Task O1：Visual Inspection</h4>
+<div class="section">
+<p>
+<table class="t-05" >
+<tr>
+<th scope="row">Purpose</th>
+<td>Conduct visual inspections of cracks on the tunnel wall and road. </td>
+</tr>
+<tr>
+<th scope="row">Subtasks</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Conduct an investigation of targets in the tunnel and  report the result.</li>
+<li><span>●</span>The inspection report should be submitted in compliance  with the format of the &ldquo;Inspection Report&rdquo; in the &ldquo;Road  tunnel regular inspection manual&rdquo; </li>
+<li><span>●</span>The following items are to be investigated.</li>
+</ol>
+</div>
+<p class="PD-L20">
+<span class="TXT-aqua bold">【O1-1】</span> Cracks  on the wall, swell, leakage.<br />
+<span class="TXT-aqua bold">【O1-2】</span> Cracks on the wall, sag, leakage. </p></td>
+</tr>
+<tr>
+<th scope="row">Field Conditions and Specifications</th>
+<td>
+<div class="image-text">
+<p>●A tunnel approximately 3.6m in width.</p>
+<div class="zoom"><a href="../images/rule/O1/TaskO1-1.jpg"><img src="../images/rule/O1/TaskO1-1.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●Targets are placed on the tunnel wall at a height of between 0mm and 2400mm.</p>
+<div class="zoom"><a href="../images/rule/O1/TaskO1-2.jpg"><img src="../images/rule/O1/TaskO1-2.jpg" alt="" width="350" height="177"/></a>
+</div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●The targets contain information associated with &ldquo;Road tunnel  regular inspection manual.&rdquo; Read and report the location and the  result.</p>
+<div class="zoom"><a href="../images/rule/O1/TaskO1-3.jpg"><img src="../images/rule/O1/TaskO1-3.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">Task  Accomplishment</th>
+<td>Pass  the finish line and submit the report of all targets.</td>
+</tr>
+<tr>
+<th scope="row">Score</th>
+<td>
+● Ranking and scoring are based on the total time to accomplish the task.<br /> 
+● Penalty time is added according to the number of mistakes on targets<br />
+　 investigated. </td>
+</tr>
+</table>
+<p class="MG-T10">Reference：<br />
+<a href="http://www.mlit.go.jp/common/001044575.pdf" target="_blank">The Ministry of Land, Infrastructure, Transport and Tourism, &ldquo;Road tunnel regular  inspection manual&rdquo; </a> </p>　
+<div id="r4-1-2"></div> 
+</p>
+</div><!--section-->
+
+
+<h4>Task O2：Hammering  Test</h4>
+<div class="section">
+<table class="t-05" >
+<tr>
+<th scope="row">Purpose</th>
+<td><p align="left">Conduct a hammering test on fastener components and damaged  wall to check the condition of attachments located near the roof.</p></td>
+</tr>
+<tr>
+<th scope="row">Subtasks</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Conduct an investigation (health diagnostics) of targets  located near the attachment of the tunnel and report the  result.</li>
+<li><span>●</span>The inspection report should be submitted in compliance  with the format of the &ldquo;Inspection Report&rdquo; in the &ldquo;Road  tunnel regular inspection manual.&rdquo;</li>
+<li><span>●</span>It is necessary to avoid colliding with the structures  during the investigation of targets.</li>
+</ol>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">Field Conditions and Specifications</th>
+<td>
+<div class="image-text">
+<p>●The tunnel is approximately 3.6m in width．</p>
+<div class="zoom"><a href="../images/rule/O2/TaskO2-2.jpg"><img src="../images/rule/O2/TaskO2-2.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●The attachment is installed to the tunnel roof with fastener components.</p>
+<div class="zoom"><a href="../images/rule/O2/TaskO2-3.jpg"><img src="../images/rule/O2/TaskO2-3.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●Targets for inspection are located near the fastener components．</p>
+<div class="zoom"><a href="../images/rule/O2/TaskO2-4.jpg"><img src="../images/rule/O2/TaskO2-4.jpg" alt="" width="350" height="177" class="  gray-frame" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●The targets contain information associated with &ldquo;Road tunnel  regular inspection manual.&rdquo; Read and report the result.</p>
+<div class="zoom"><a href="../images/rule/O2/TaskO2-5.jpg"><img src="../images/rule/O2/TaskO2-5.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●The drawing of the tunnel is available．</p>
+<div class="zoom"><a href="../images/rule/O2/TaskO2-6.jpg"><img src="../images/rule/O2/TaskO2-6.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div></div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●A scaffolding has been placed to facilitate access to the roof of the tunnel.</p>
+<div class="zoom"><a href="../images/rule/O2/TaskO2-1.jpg"><img src="../images/rule/O2/TaskO2-1.jpg" alt="" width="350" height="177"/></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">Task  Accomplishment</th>
+<td>
+Pass the finish line and submit the report of all targets.
+</td>
+</tr>
+<tr>
+<th scope="row">Score</th>
+<td>
+●  Ranking and scoring are based on the total time to accomplish  the task. <br />
+●  Penalty time is added according to the number of mistakes on  targets<br />
+　 investigated. </td>
+</tr>
+</table>
+<div id="r4-2-1"></div> 
+</div><!--section-->
+
+
+<div class="en-h2">４-２ Task  at the outset of disaster/rescue<br />
+　　　(Task category code: R)</div>
+<!--<h4>Task R1：Long-distance navigation</h4>-->
+<!--<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">Purpose</th>
+<td><p align="left">Navigate over a long distance, avoiding obstacles.</p></td>
+</tr>
+<tr>
+<th scope="row">Subtasks</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Move from the start to end point within a specified time frame. </li>
+<li><span>●</span>Avoid vehicles left on the road.</li>
+<li><span>●</span>It is permitted to use the vehicles already available in the field. </li>
+<li><span>●</span>If a robot uses a vehicle, it can on board before start. </li>
+</ol>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">Field Conditions and Specifications</th>
+<td>
+
+  
+<div class="image-text">
+<p>
+●The road is two way with two lanes, each 3m wide, with 1m shoulders on both sides.<br /><br />
+●The road extends to 100m<br /><br />
+</p>
+<div class="zoom"><a href="../images/rule/R1/TaskR1-1.jpg"><img src="../images/rule/R1/TaskR1-1.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+</div>
+
+<div class="image-text">
+<p>
+●The road curves gently from the start to the goal.<br />
+<br />
+●The start and goal point are at the same height. The 50m point is 1m higher than the start.<br />
+<br />
+●The lighting in the field will be equivalent to emergency lights.
+  </p>
+  <div class="zoom"><a href="../images/rule/R1/TaskR1-2.jpg"><img src="../images/rule/R1/TaskR1-2.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+    
+  <div class="zoom"><a href="../images/rule/R1/TaskR1-3.jpg"><img src="../images/rule/R1/TaskR1-3.jpg" alt="" width="350" height="177" class=" gray-frame-02 " /></a></div>
+    
+  <div class="zoom"><a href="../images/rule/R1/TaskR1-4.jpg"><img src="../images/rule/R1/TaskR1-4.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+    
+  <div class="zoom"><a href="../images/rule/R1/TaskR1-5.jpg"><img src="../images/rule/R1/TaskR1-5.jpg" alt="" width="350" height="177" class=" gray-frame-02 " /></a></div>
+  </div>
+</td>
+</tr>
+<tr>
+<th scope="row">Task  Accomplishment</th>
+<td>Move to the end point within a specified time frame. </td>
+</tr>
+<tr>
+<th scope="row">Score</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Ranking and scoring are based on the total time to accomplish the task. </li>
+<li><span>●</span>If the robot fails to reach the goal in time, points are given based on the point it reached (check point). 3 check points are placed including the goal．</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+<div id="r4-2-2"></div> 
+</div>--><!--section-->
+
+
+<h4>Task R1：Vehicle Inspection</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+  <th scope="row">Purpose</th>
+<td>Check the appearance of the vehicles and surrounding conditions  to examine the vehicle damage, leaking fuel and survivors outside  the vehicles. </td>
+</tr>
+<tr>
+<th scope="row">Subtasks</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Start from the specified location, locate and inspect the  following 3 search categories (1)-(3) of each vehicle, report  the result and head to the goal. </li>
+<li><span>●</span>3 categories are as follows:</li>
+</ol>
+</div>
+<div class="dash-ine "></div>
+
+<div class="image-text">
+<p>
+<span class="bold TXT-aqua">【R1-1】Condition outside the vehicle </span><br />
+・Identify 4 targets placed outside the vehicle and report the  findings.</p>
+<div class="zoom"><a href="../images/rule/R2/L/Task_R2_L_1.jpg"><img src="../images/rule/R2/L/Task_R2_L_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/L/Task_R2_L_2.jpg"><img src="../images/rule/R2/L/Task_R2_L_2.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/L/Task_R2_L_3.jpg"><img src="../images/rule/R2/L/Task_R2_L_3.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/L/Task_R2_L_4.jpg"><img src="../images/rule/R2/L/Task_R2_L_4.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/L/Task_R2_L_5.jpg"><img src="../images/rule/R2/L/Task_R2_L_5.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/L/Task_R2_L_6.jpg"><img src="../images/rule/R2/L/Task_R2_L_6.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B20" /></a></div>
+</div>
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+
+<div class="image-text">
+<p>
+<span class="bold TXT-aqua">【R1-2】  Condition inside the vehicle</span><br />
+・Identify targets placed inside the vehicle and report the findings.<br /><br />
+・Targets are placed in the following 5 locations.<br />
+<span class=" bold">【R1-2A】</span>Driver  seat<br />
+<span class=" bold">【R1-2B】</span>Passenger  seat<br />
+<span class=" bold">【R1-2C】</span>Back  seat<br />
+<span class=" bold">【R1-2D】</span>Under  the driver or passenger seat<br />
+<span class="bold">【R1-2E】</span>Under  the back seat</p>
+<div class="zoom"><a href="../images/rule/R2/M/Task_R2_M_1.jpg"><img src="../images/rule/R2/M/Task_R2_M_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/M/Task_R2_M_2.jpg"><img src="../images/rule/R2/M/Task_R2_M_2.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/M/Task_R2_M_3.jpg"><img src="../images/rule/R2/M/Task_R2_M_3.jpg" alt="" width="350" height="177"/></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/M/Task_R2_M_4.jpg"><img src="../images/rule/R2/M/Task_R2_M_4.jpg" alt="" width="350" height="177"/></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/M/Task_R2_M_5.jpg"><img src="../images/rule/R2/M/Task_R2_M_5.jpg" alt="" width="350" height="177"/></a></div>
+
+<div class="zoom"><a href="../images/rule/R2/M/Task_R2_M_6.jpg"><img src="../images/rule/R2/M/Task_R2_M_6.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+</div>
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+
+<p class="bold TXT-aqua">【R1-3】  Location  of the vehicle </p>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Report the quantitative location of targets placed outside the vehicle. Quantitative location means 3D coordinate (x, y, z) of the target location. </li>
+<li><span>●</span>Submit 3D information describing the vehicles' qualitative condition.  </li></ol>
+</div>
+
+</td>
+</tr>
+<tr>
+<th scope="row">Field Conditions and Specifications</th>
+<td>
+Abandoned vehicle type is either<br />
+<span class="bold">【M】</span>standard  size car<br />  
+<span class="bold">【L】</span>large  size car and vehicle condition is either<br />
+<span class="bold">【s】</span>stationary (tires are in contact with the road surface)<br />
+<span class="bold">【u】</span>overturned.<br /></td>
+</tr>
+<tr>
+<th scope="row">Task  Accomplishment</th>
+<td><div class="maru-no">
+<ol>
+<li><span>●</span>Execute some or all of the item 【R1-1】, 【R1-2】 and  【R1-3】 and head to the goal. </li>
+<li><span>●</span>Report the condition of targets for the item 【R1-1】and  【R1-2】. </li>
+<li><span>●</span> Report each target's 3D coordinate and 3D information  of vehicle condition for item 【R1-3】．</li>
+</ol>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">Score</th>
+<td>
+● Points are given based on identification and report of targets. <br />
+● Additional points (bonus points) are given according to the time when all of the subtasks are completed.
+</td>
+</tr>
+</table>
+<div id="r4-2-2"></div> 
+</div><!--section-->
+
+
+
+<h4>Task R2：Traversing Obstacles</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">Purpose</th>
+<td>Traverse  rough terrain.</td>
+</tr>
+<tr>
+<th scope="row">Subtasks</th>
+<td>Start from the specified location, traverse obstacles, or in the confined space formed by obstacles, and reach the goal.
+</td>
+</tr>
+<tr>
+<th scope="row">Field Conditions and Specifications</th>
+<td>
+Traverse 3 different fields along with the specified route.<br /><br />
+<div class="image-text">
+<p><span class="TXT-aqua bold">【R2_A】 <br />
+Crossing  Ramp  field</span><br />
+Obstacles consisting of ramps with 150 degree top and valley angle.<br /><br />
+<span class="TXT-aqua bold">【R2_B】 <br />
+DRC Stepfield</span><br />
+Obstacles consisting of 40-square-cm blocks with 15 degree ramp.</p>
+<div class="zoom"><a href="../images/rule/R3/A/Task_R3_A_1.jpg"><img src="../images/rule/R3/A/Task_R3_A_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R3/A/Task_R3_A_2.jpg"><img src="../images/rule/R3/A/Task_R3_A_2.jpg" alt="" width="350" height="177" class="gray-frame-02"/></a></div>
+
+<div class="zoom"><a href="../images/rule/R3/A/Task_R3_A_3.jpg"><img src="../images/rule/R3/A/Task_R3_A_3.jpg" alt="" width="350" height="177" class="gray-frame-02"/></a></div>
+
+<div class="zoom"><a href="../images/rule/R3/A/Task_R3_A_4.jpg"><img src="../images/rule/R3/A/Task_R3_A_4.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B20" /></a></div>
+</div>
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+<div class="image-text">
+<p>
+<span class="TXT-aqua bold">【R2_C】 <br />
+Narrow Space Field </span>
+Consists of 900mm modules. Obstacles simulating confined area consisting of 2-by-4 blocks, including a walk-through pipe of 60cm diameter. </p>
+<div class="zoom"><a href="../images/rule/R3/B/Task_R3_B_1.jpg"><img src="../images/rule/R3/B/Task_R3_B_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R3/B/Task_R3_B_2.jpg"><img src="../images/rule/R3/B/Task_R3_B_2.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R3/B/Task_R3_B_3.jpg"><img src="../images/rule/R3/B/Task_R3_B_3.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R3/B/Task_R3_B_4.jpg"><img src="../images/rule/R3/B/Task_R3_B_4.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">Task  Accomplishment</th>
+<td>
+Traverse from the start to end point.
+</td>
+</tr>
+<tr>
+<th scope="row">Score</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Ranking and scoring are based on the total time to accomplish the task.</li>
+<li><span>●</span>If the robot fails to reach the goal in time, points are given based on the point it reached (check point). 3 check points are placed including the goal．</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+<div id="r4-2-3"></div> 
+</div><!--section-->
+
+
+
+<h4>Task R3：Vehicle Inspection using Tools</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">Purpose</th>
+<td>Investigate condition inside the vehicle by using tools commonly used by humans.</td>
+</tr>
+<tr>
+<th scope="row">Subtasks</th>
+<td>
+● Investigate the inside condition of the vehicle by using tools.<br />
+● The following tools are used and available in the field.<br />
+<p class="MG-L20">
+・　Spreader <br />
+・　Ladder 
+</p>
+● nvestigation tasks are as follows.<br />
+<br />
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+<div class="image-text">
+<p><span class="TXT-aqua bold">【R3_A】 <br />
+Deformed vehicle</span><br />
+・Pick up the spreader and move to the vehicle.<br />
+<br />
+・Open the vehicle door with the spreader.<br />
+<br />
+・To open the door with the spreader, manipulate the switch while placing the spreader at the specified location and direction.<br />
+<br />
+・Identify a target through the opened door. Report the findings.
+</p>
+<div class="zoom"><a href="../images/rule/R4/A/Task_R4_A_1.jpg"><img src="../images/rule/R4/A/Task_R4_A_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R4/A/Task_R4_A_2.jpg"><img src="../images/rule/R4/A/Task_R4_A_2.jpg" alt="" width="350" height="177" class="gray-frame-02"/></a></div>
+
+<div class="zoom"><a href="../images/rule/R4/A/Task_R4_A_3.jpg"><img src="../images/rule/R4/A/Task_R4_A_3.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B20"/></a></div>
+</div>
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+  
+<div class="image-text">
+<p><span class="TXT-aqua bold">【R3_B】<br />
+Overturned large vehicle</span><br />
+・Climb the ladder and identify a target through the upper window. Report the findings.<br />
+<br />
+・No need to use a ladder if a robot can investigate through the upper window without using a ladder.
+</p>
+<div class="zoom"><a href="../images/rule/R4/B/Task_R4_B_1.jpg"><img src="../images/rule/R4/B/Task_R4_B_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R4/B/Task_R4_B_2.jpg"><img src="../images/rule/R4/B/Task_R4_B_2.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R4/B/Task_R4_B_3.jpg"><img src="../images/rule/R4/B/Task_R4_B_3.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R4/B/Task_R4_B_4.jpg"><img src="../images/rule/R4/B/Task_R4_B_4.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R4/B/Task_R4_B_5.jpg"><img src="../images/rule/R4/B/Task_R4_B_5.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+</div>
+
+</td>
+</tr>
+<tr>
+<th scope="row">Field Conditions and Specifications</th>
+<td>
+● A spreader is placed on a platform in the field.<br />
+● A ladder is already attached to the vehicle.
+</td>
+</tr>
+<tr>
+<th scope="row">Task  Accomplishment</th>
+<td>
+Identify a target within a specified time frame, report the findings and head to the goal.
+</td>
+</tr>
+<tr>
+<th scope="row">Score</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Points are given for the identification of targets and the report.</li>
+<li><span>●</span>Additional points (bonus points) are given according to the time only when all of the subtasks are completed.</li></ol>
+</div>
+</td>
+</tr>
+</table>
+<div id="r4-2-4"></div> 
+</div><!--section-->
+
+
+
+<h4>Task R4：Secure the Route</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">Purpose</th>
+<td>Remove the obstacles on the specified route to secure the route for operation and evacuation.</td>
+</tr>
+<tr>
+<th scope="row">Subtasks</th>
+<td>
+● Remove the obstacles from the specified route to secure the route.<br />
+● The shape and weight of the obstacles are as follows.<br />
+<p class="MG-L20">
+<span class="bold">【A】</span>Obstacles to remove is &ldquo;L&rdquo; shaped and weighs 3kg. <br />
+<span class="bold">【B】</span>Obstacles to move is &ldquo;L&rdquo; shaped and weighs 10kg.</p>
+</td>
+</tr>
+<tr>
+<th scope="row">Field Conditions and Specifications</th>
+<td>
+<div class="image-text">
+<p>● The specified route for object removal is designated by color in the field. 
+</p> 
+<div class="zoom"><a href="../images/rule/R5/Task_R5_1.jpg"><img src="../images/rule/R5/Task_R5_1.jpg" alt="" width="350" height="177"  class="gray-frame-02" /></a></div>
+</div>
+
+<div class="image-text">
+<p>● Fixed structures surrounding the specified route impose constraints on the movement of the robots and the obstacles. 
+</p> 
+<div class="zoom"><a href="../images/rule/R5/Task_R5_2.jpg"><img src="../images/rule/R5/Task_R5_2.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R5/Task_R5_3.jpg"><img src="../images/rule/R5/Task_R5_3.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R5/Task_R5_4.jpg"><img src="../images/rule/R5/Task_R5_4.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">Task  Accomplishment</th>
+<td>Remove obstacles from the specified route and head to the goal.</td>
+</tr>
+<tr>
+<th scope="row">Score</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Points are given by removing each obstacle from the specified route.</li>
+<li><span>●</span>Additional points (bonus points) are given according to the time only when all of the subtasks are completed.</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+<div id="r4-2-5"></div> 
+</div><!--section-->
+
+
+
+<h4>Task R5：Support Fire Extinguishing </h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">Purpose</th>
+<td>Support in fire extinguishing</td>
+</tr>
+<tr>
+<th scope="row">Subtasks</th>
+<td>
+Subtasks are as follows.<br />
+<p>
+<span class="TXT-aqua bold">【R5-1】</span>Open the door of firefighting equipment cabinet. <br />
+<span class="TXT-aqua bold">【R5-2】</span>Pull out the entire hose.<br />
+<span class="TXT-aqua bold">【R5-3】</span>Remove a nozzle.<br />
+<span class="TXT-aqua bold">【R5-4】</span>Connect the nozzle to the hose. <br />
+<span class="TXT-aqua bold">【R5-5】</span>Open the valve. (Check the water flow) 
+</p>
+<br />
+
+<div class="zoom"><a href="../images/rule/R6/Task_R6_1.jpg"><img src="../images/rule/R6/Task_R6_1.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B10" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R6/Task_R6_2.jpg"><img src="../images/rule/R6/Task_R6_2.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B10" /></a></div>
+
+<div class="zoom"><a href="../images/rule/R6/Task_R6_3.jpg"><img src="../images/rule/R6/Task_R6_3.jpg" alt="" width="350" height="177" /></a></div>
+</td>
+</tr>
+<tr>
+<th scope="row">Field Conditions and Specifications</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>Firefighting equipment is based on &ldquo;Road tunnel  emergency facility installation standards&rdquo;. </li>
+<li><span>●</span>Firefighting equipment cabinet is installed on the tunnel  wall and the door handle is located 1m high.</li>
+<li><span>●</span>Door, hinged at the bottom, opens without a lock.</li>
+<li><span>●</span>Hose is stored in a concertina arrangement.</li>
+<li><span>●</span>Nozzle and hose are stored separately.</li>
+<li><span>●</span>Valve is installed inside firefighting equipment cabinet. The valve handle sticks out sideways.<br />
+<br />
+</li>
+</ol>
+</div>
+<p align="left"><span class="TXT-RED">References：</span><br />
+<img src="../images/rule/R6/shokasen-01.png" alt="" width="275" height="218" class="imgL" /><img src="../images/rule/R6/shokasen-02.jpg" alt="" width="275" height="218" />
+</p></td>
+</tr>
+<tr>
+<th scope="row">Task  Accomplishment</th>
+<td>
+Execute some or all of the subtasks 【R5-1】 to 【R5-5】 and head to the goal.
+</td>
+</tr>
+<tr>
+<th scope="row">Score</th>
+<td><div class="maru-no">
+<ol>
+<li><span>●</span>Points are given by accomplishing subtasks. </li>
+<li><span>●</span>Additional points are given according to the time (bonus points) only when all of the subtasks are completed in the following order.</li>
+</ol>
+</div>
+<p class="MG-T15"><span class="bold">Work procedure</span><br />
+  【R5-1】 → {【R5-2】 → 【R5-3】} or {【R5-3】 → 【R5-2】}<br />
+　→  【R5-4】 → 【R5-5】</p></td>
+</tr>
+</table>
+<div id="r3"></div> 
+</div><!--section-->
+
+
+
+
+
+</div>
+<!-- / #main -->
+
+<div id="sub">
+<div class="alpha MG-B10"><a href="https://www.facebook.com/jvrcorg" target="_blank"><img src="../images/en/facebook_en.png" width="176" height="145" alt="facebook-JVRC" /></a></div>
+
+<div class="alpha"><a href="https://jvrc.org/bbs/light.cgi" target="_blank"><img src="../images/en/forum.png" width="176" height="135" alt="The forum of information exchange for JVRC." /></a></div>
+
+
+<h3 class="ls-1">Participation terms</h3>
+<ul>
+<li><a href="#r1">１．Introduction: Background for the development of the JRVC  competition tasks</a></li>
+<li><a href="#r2">２．Scenario</a></li>
+<li><a href="#r3">３．Equivalent Tasks</a></li>
+<li><a href="#r4">４．Competition  Task</a></li>
+<li><a href="#r4-1-1">4-1 Ordinary  task <br />Task O1：Visual Inspection</a></li>
+<li><a href="#r4-1-2">Task O2：Hammering  Test</a></li>
+<li><a href="#r4-2-1">4-2 Task  at the outset of disaster/rescue<!--<br />
+  Task R1：Long-distance navigation--></a></li>
+<li><a href="#r4-2-1">Task R1：Vehicle Inspection</a></li>
+<li><a href="#r4-2-2">Task R2：Traversing Obstacles</a></li>
+<li><a href="#r4-2-3">Task R3：Vehicle Inspection using Tools</a></li>
+<li><a href="#r4-2-4">Task R4：Secure the Route</a></li>
+<li><a href="#r4-2-5">Task R5：Support Fire Extinguishing </a></li>
+</ul>
+
+
+
+
+</div><!-- / #sub -->
+
+</div><!-- / #contents -->
+
+
+<div class="pageTop alpha">
+<a href="#"><img src="../images/go-top.png" alt="to TOP" width="88" height="38" /></a></div>
+
+<div id="footer">
+<div class="alpha sponsor2">
+<table>
+<tr>
+<td>
+Organizers：<a href="http://www.nedo.go.jp/english/index.html" target="_blank"><img src="../images/nedo-logo.png" alt="New Energy and Industrial Technology Development Organization" width="60" height="31"/></a></td>
+<td>New Energy and Industrial Technology <br />
+Development Organization</td>
+<td class="space">&nbsp;</td>
+<td>Co-Organizer：<a href="http://www.meti.go.jp/english/index.html" target="_blank"><img src="../images/keizai-logo.png" alt="Ministry of Economy, Trade and Industry" width="111" height="33" /></a></td>
+<td>Ministry of Economy, <br />
+Trade and Industry</td>
+</tr>
+</table>
+</div>
+<div class="copyright">Copyright &copy; 2015 Japan Virtual Robotics Challenge. All Rights Reserved.</div>
+<!-- / #footer --></div>
+
+<!-- / #page --></div>
+
+</body>
+</html>

@@ -1,0 +1,1086 @@
+@charset "utf-8";
+
+/*----------------------------------------------------
+	基本設定
+----------------------------------------------------*/
+body {
+	min-width: 1135px;
+}
+
+a:link {
+	color:#2586ca;
+	text-decoration: none;
+}
+a:visited {
+	color:#2586ca;
+	text-decoration: none;
+}
+a:hover {
+	color:#f7931e;
+	text-decoration: underline;
+}
+/*a:active {
+	color:#42a0e2;
+	text-decoration: none;
+}*/
+
+
+/*----------------------------------------------------
+	汎用class
+----------------------------------------------------*/
+.imgR {
+	float: right;
+	margin: 0 0 0 1em;
+}
+
+.imgL {
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+.btn {
+	text-align: center;
+}
+
+/* clearfix */
+.clearfix:after {
+	content: "."; display: block; visibility: hidden; height: 0.1px; font-size: 0.1em; line-height: 0; clear: both;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+
+/* margin
+----------------------------------------------------------*/
+/* Top */
+.MG-T0 { margin-top: 0 !important; }
+.MG-T5 { margin-top: 5px !important; }
+.MG-T10 { margin-top: 10px !important; }
+.MG-T15 { margin-top: 15px !important; }
+.MG-T20 { margin-top: 20px !important; }
+.MG-T25 { margin-top: 25px !important; }
+.MG-T30 { margin-top: 30px !important; }
+/* Bottom */
+.MG-B0 { margin-bottom: 0 !important; }
+.MG-B5 { margin-bottom: 5px !important; }
+.MG-B10 { margin-bottom: 10px !important; }
+.MG-B15 { margin-bottom: 15px !important; }
+.MG-B20 { margin-bottom: 20px !important; }
+.MG-B25 { margin-bottom: 25px !important; }
+.MG-B30 { margin-bottom: 30px !important; }
+/* Right */
+.MG-R10 { margin-right: 10px !important; }
+.MG-R20 { margin-right: 20px !important; }
+.MG-R30 { margin-right: 30px !important; }
+
+/* Left */
+.MG-L10 { margin-left: 10px !important; }
+.MG-L15 { margin-left: 15px !important; }
+.MG-L20 { margin-left: 20px !important; }
+.MG-L30 { margin-left: 30px !important; }
+
+
+/* padding
+----------------------------------------------------------*/
+/* Left */
+.PD-L5 { padding-left: 5px !important; }
+.PD-L10 { padding-left: 10px !important; }
+.PD-L15 { padding-left: 15px !important; }
+.PD-L20 { padding-left: 20px !important; }
+.PD-L25 { padding-left: 25px !important; }
+.PD-L30 { padding-left: 30px !important; }
+/* Right */
+.PD-R5 { padding-right: 5px !important; }
+.PD-R10 { padding-right: 10px !important; }
+.PD-R15 { padding-right: 15px !important; }
+.PD-R20 { padding-right: 20px !important; }
+.PD-R25 { padding-right: 25px !important; }
+.PD-R30 { padding-right: 30px !important; }
+
+/* フォントサイズ・カラー
+----------------------------------------------------------*/
+.TXT-S { font-size:12px;}
+.TXT-M { font-size:14px;}
+.TXT-L { font-size:16px;}
+
+.TXT-RED { color:#FF3333;}
+.TXT-ORG { color:#f7931e;}
+.TXT-aqua { color: #37BEFF;}
+.TXT-water-color{ color: #0080FF;}
+
+/* -----------------------------------------------------------
+		ヘッダー
+----------------------------------------------------------- */
+#header {
+	width:100%;
+	margin: 0 auto;
+	background: url(../images/header-bg.png) repeat-y;
+	background-size: 100%;
+	height: 313px;
+
+}
+
+#header .imgArea {
+	width: 1115px;
+	margin: 0 auto;
+	height: 313px;
+	position: relative;  
+} 
+
+#header .english a{
+	position: absolute;
+	top: 0px;
+	left: 925px;
+	z-index: 10;
+	width: 90px;
+	height: 23px;
+	background-color: #868686;
+	padding: 0 0 0 15px;
+	color:#FFF;
+	font-size:12px;
+}
+
+#header .english a:hover{
+	background-color:#333333;
+	color:#FFF;
+	text-decoration:none;
+/*	filter: alpha(opacity=70);
+    -moz-opacity:0.70;
+    opacity:0.70;*/
+	
+}
+
+#header .english img{
+	vertical-align:middle;
+	margin-right:7px;
+}
+
+
+
+/* -----------------------------------------------------------
+	#navi
+		ナビ
+----------------------------------------------------------- */
+#navi {
+	clear: both;
+	background: #fff url(../images/navi_bg.png);
+	height: 52px;
+	z-index:1000;
+}
+
+/* #gNavと#naviAreaは古いものなので今は使わない
+----------------------------------------------------------- */
+#navi #gNav {
+	clear: both;
+	overflow: hidden;
+	
+	width: 955px;
+	margin: 0 auto;
+}
+
+* html #navi #gNav {
+	height: 1%;
+}
+
+#naviArea ul{
+	background:url(../images/menu-line.png) no-repeat right;
+	list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+
+	display: -webkit-box; /* Android 2~4 */
+	-webkit-box-pack: justify; /* Android 2~4 */
+	display: flex;
+	display: -webkit-flex; /* Safari */
+	justify-content: space-around;
+	-webkit-justify-content: space-around; /* Safari */
+}
+
+#navi #gNav li {
+	display: block;	
+	text-align: center;
+	
+	-webkit-box-flex: 1; /* Android 2~4 */
+	flex: auto;
+	-webkit-flex: auto;
+}
+
+#navi #gNav li a{
+	background: url(../images/menu-line.png) no-repeat 0 8px;
+	
+	display: inline-block;
+/*	padding: 16px 0 12px 0;*/
+    padding-top:2px;
+    line-height:50px;
+	text-decoration: none;
+	width: 100%;
+	color: #fff;
+	font-size:15px;
+	text-shadow: 1px 1px 2px #000;
+}
+
+#navi #gNav li a:hover{
+	color: #fff;
+	background-color: rgba(0, 180, 255, 0.6);
+	text-shadow: 1px 1px 2px #000;
+}
+
+#navi #gNav li img{
+    vertical-align: middle;
+}
+
+.fixed {
+	position: fixed;
+	width:100%;
+	top: 0px;
+	left:auto;
+}
+
+.current-page{
+	color: #fff;
+	background-color: rgba(0, 180, 255, 0.25);
+	text-shadow: 1px 1px 2px #000;
+}
+
+
+
+/* -----------------------------------------------------------
+	#トップに戻るボタン
+----------------------------------------------------------- */
+
+.pageTop {
+	clear: both;
+	height:38px;
+	text-align:center;
+}
+
+
+/* -----------------------------------------------------------
+	#footer
+		フッター
+----------------------------------------------------------- */
+#footer {
+	clear: both;
+	margin:0;
+	padding:0;
+	background: #2a2a2a;
+	height:104px;		
+	text-align: center;
+	color:#FFF;
+}
+
+#footer .sponsor{
+	padding:24px 0 0 0;
+}
+
+#footer .sponsor a{
+	color:#FFF;
+}
+
+#footer img{
+    vertical-align: middle;
+	margin-right:1em;
+}
+
+#footer table{
+	margin: 0 auto;
+}
+
+#footer td {
+	text-align:left;
+}
+
+#footer td.space {
+	width:56px;
+}
+
+#footer .sponsor2{
+	padding:12px 0 0 0;
+}
+
+#footer .copyright {
+	font-size:11px;
+	padding:10px 0 0 0;
+}
+
+
+/*----------------------------------------------------
+	#page
+----------------------------------------------------*/
+#page {
+	margin: 0 auto ;
+}
+
+
+/*----------------------------------------------------
+	#contents
+----------------------------------------------------*/
+#contents {
+	width: 955px;
+	margin: 20px auto 0 auto;
+	padding:43px 0 30px 0;
+	text-align: left;
+}
+
+
+
+/*----------------------------------------------------
+	#main
+		メイン
+----------------------------------------------------*/
+#main {
+	float:left;
+	width: 746px;
+}
+
+#main h2{
+	font-size: 26px;
+	font-weight: bold;
+	width: 746px;
+	height: 43px;
+	background: url(../images/h2-bg.png) repeat-x;
+	padding: 3px 0 0 0;
+}
+
+#main2 {
+	width: 810px;
+	margin:0 auto;
+}
+
+#main2 h2{
+	margin:0 auto;
+	font-size: 26px;
+	font-weight: bold;
+	width: 100%;
+	height: 43px;
+	background: url(../images/h2-bg.png) repeat-x;
+	padding: 3px 0 0 0;
+}
+
+.en-h2{
+	margin:0 auto;
+	font-size: 26px;
+	font-weight: bold;
+	width: 100%;
+	line-height: 1.2em;
+	height: 70px;
+	background: url(../images/h2-bg.png)  repeat-x bottom;
+	padding: 3px 0 0 0;
+}
+
+#main h3{
+	font-size: 20px;
+	width: 100%;
+	height: 44px;
+	padding:0;
+	margin:0;
+	background: #0057AE;
+	line-height:46px;
+	color:#FFF;
+	text-indent:30px;
+
+}
+.en-h3{
+	font-size: 20px;
+	height: 60px;
+	padding:8px 0 0 30px;
+	margin:0;
+	background: #0057AE;
+	line-height:1.2em;
+	color:#FFF;
+	font-weight: bold;
+}
+
+
+#main h4{
+	padding:5px 20px;
+	background-color: #79C507;
+	margin-top:20px;
+	color:#ffffff;
+	font-size:16px;
+}
+
+#main h5{
+	padding:5px 20px;
+	background-color: #3E9CCA;
+	margin-bottom:5px;
+	color:#ffffff;
+	font-size:16px;
+}
+
+
+#main .section{
+	margin: 0 0 50px 0;
+	padding: 25px 5px 0 5px;
+}
+
+#main .section img{
+	display:block;
+}
+
+
+#main2 .section{
+	margin: 0 0 65px 0;
+	padding: 25px 5px 0 5px;
+}
+
+#main2 .section-02{
+	margin: 25px 0 0 0;
+	padding: 10px 15px 20px 15px;
+	color:#222222;
+	font-size:12px;
+	line-height:1.5em;
+/*	overflow: auto; */ 
+    width: auto;
+    height: auto;
+	border:1px solid #cccccc;
+}
+
+#main2 .section-02 a{
+	text-decoration:underline;
+	color:#222222;
+}
+
+#main .section-03{
+	margin: 0 0 25px 0;
+	padding: 10px 5px 0 5px;
+}
+
+#main .news-tit{
+	font-size: 16px;
+	width: 100%;
+/*	height: 37px;*/
+	padding:6px 0;
+	margin:0;
+	background: #0057AE;
+/*	line-height:39px;*/
+	color:#FFF;
+	text-indent:20px;
+	font-weight:bold;
+}
+
+
+
+
+/* テーブル 01
+----------------------------------------------------------- */
+.t-01{
+	width: 100%;
+	border-top: solid 1px #ddd;
+}
+
+.t-01 td,.t-01 th{
+	border-collapse: collapse;
+	border-bottom: solid 1px #ddd;
+	padding: 1em;
+}
+
+.t-01 th{
+	color: #0080FF;
+	width:80px;
+}
+
+
+
+/* テーブル 02
+----------------------------------------------------------- */
+.t-02{
+	width: 100%;
+	border-top: solid 1px #ddd;
+}
+
+.t-02 td, th{
+	border-collapse: collapse;
+	border-bottom: solid 1px #ddd;
+	border-left:none;
+	border-right:none;
+	padding:8px;
+}
+
+.t-02 th{
+	text-indent:1em;
+	width:auto;
+}
+
+
+/* テーブル 03
+----------------------------------------------------------- */
+.t-03{
+	width: 100%;
+	border-top: solid 1px #ddd;
+}
+
+.t-03 td{
+	border-collapse: collapse;
+	border-bottom: solid 1px #ddd;
+	padding:5px;
+}
+
+
+/* テーブル 04
+----------------------------------------------------------- */
+.t-04{
+	width: 100%;
+	border: solid 1px #ddd;
+}
+
+.t-04 td,.t-04 th{
+	padding: 8px;
+	border: solid 1px #ddd;
+}
+
+.t-04 th{
+	color: #0080FF;
+	width:auto;
+}
+
+/* テーブル 05
+----------------------------------------------------------- */
+.t-05{
+	width: 100%;
+	border: solid 1px #ddd;
+}
+
+.t-05 td,.t-05 th{
+	padding: 8px;
+	border: solid 1px #ddd;
+}
+
+.t-05 th{
+	color: #0080FF;
+	width:20%;
+	vertical-align:top;
+}
+
+/* テーブル 06
+----------------------------------------------------------- */
+
+.t-06{
+	width: 100%;
+	font-size:14px;
+	margin:5px 0 40px 0;
+	border:solid 1px #ddd;
+}
+
+.t-06 td{
+	padding:8px ;
+	border-bottom:solid 1px #ddd;
+}
+
+.t-06 th{
+	width:380px;
+	font-weight:normal;
+	padding:8px ;
+	border-bottom:solid 1px #ddd;
+    border-right:solid 1px #ddd;
+}
+
+.t-06 img{
+	vertical-align: bottom;
+}
+
+/* テーブル 07
+----------------------------------------------------------- */
+
+.t-07{
+	width: 100%;
+	font-size:14px;
+	margin:10px 0 ;
+
+}
+
+.t-07 td{
+/*	text-align:center;*/
+}
+
+
+
+
+/*ストライプカラー設定
+----------------------------------------------------------------*/
+
+.information td.even {;
+    background: #f4f8fe;
+}
+
+
+/* -----------------------------------------------------------
+		サイドバー
+----------------------------------------------------------- */
+#sub {
+	float: right;
+	width: 176px;
+}
+
+#sub h3{
+	width: 176px;
+	height: 36px;
+	display: inline-block;
+	line-height:39px;
+	background: #e0e0e0;
+	text-indent:15px;
+	margin-top:15px;
+	font-size:17px;
+	color:#000;
+	text-shadow: 1px 1px 0px #bbbbbb;
+}
+
+#sub ul {
+	margin:0;
+}
+
+#sub ul li{
+	list-style-type: none;
+	padding: 18px 0;
+	border-bottom: solid #c4c4c4 1px;
+	margin: 0 ;
+	font-size:12px;
+	line-height:21px;
+}
+
+/* サイドバー02
+----------------- */
+
+#sub2 {
+	float: right;
+	width: 176px;
+}
+
+#sub2 h3{
+	width: 176px;
+	height: 36px;
+	display: inline-block;
+	line-height:39px;
+	background: #e0e0e0;
+	text-indent:15px;
+	margin-top:15px;
+	font-size:17px;
+	color:#000;
+	text-shadow: 1px 1px 0px #bbbbbb;
+}
+
+#sub2 ul li span{
+	font-weight:bold;
+}
+
+#sub2 ul {
+	margin:0;
+}
+
+#sub2 ul li{
+	list-style-type: none;
+	padding: 10px 0;
+	border-bottom: solid #c4c4c4 1px;
+	margin: 0 ;
+	font-size:12px;
+	line-height:21px;
+}
+
+#sub2 ul li span{
+	font-weight:bold;
+}
+
+
+/* -----------------------------------------------------------
+	ダウンロードボタン
+----------------------------------------------------------- */
+
+.dwn_btn{
+	font-size:18px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #83c41a;
+	padding:13px 45px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	background:-ms-linear-gradient( top, #9dce2c 5%, #8cb82b 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dce2c', endColorstr='#8cb82b');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #9dce2c), color-stop(100%, #8cb82b) );
+	background-color:#9dce2c;
+	display:inline-block;
+	text-shadow:1px -1px 0px #689324;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #c1ed9c;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #c1ed9c;
+ 	box-shadow:inset 1px 1px 0px 0px #c1ed9c;
+}
+
+.dwn_btn:hover {
+	color:#FFF;
+    text-decoration:none;
+	background-color: #5EAD23;
+	background:-moz-linear-gradient( center top, #5EAD23 100%, #5EAD23 100% );
+	background:-ms-linear-gradient( top, #5EAD23 100%, #5EAD23 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5EAD23', endColorstr='#5EAD23');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(100%, #5EAD23), color-stop(100%, #5EAD23) );
+}
+
+.dwn_btn_white a{
+	color:#ffffff;
+}
+
+/* -----------------------------------------------------------
+画像ズーム
+----------------------------------------------------------- */
+
+.zoom { 
+    position: relative; 
+} 
+
+img.zoom_icon { 
+    position: absolute; 
+	top:-5px; 
+    left:-5px;
+/*    top:-10px; 
+    left: -7px; */
+}
+
+
+/* -----------------------------------------------------------
+	ルールページ
+----------------------------------------------------------- */
+
+/*.orange-square{
+	padding:0 20px;
+	background-color: #F3B136;
+	margin-top:20px;
+	color:#000000;
+	font-size:16px;
+}*/
+
+.square-blue{
+	padding:5px 20px;
+	background-color: #0670C6;
+	margin-top:20px;
+	color:#ffffff;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.maru-no ol{
+    position: relative;
+    margin:0;
+    padding:0
+}
+ 
+.maru-no ol li{
+    list-style: none;
+    list-style-position:outside;
+    margin:0 0 5px 0;
+    padding-left:1.3em;
+}
+.maru-no ol li span {
+    position: absolute;
+    left:0;
+    margin:0
+}
+ 
+/*IE6*/
+*html .maru-no ol li span  {
+    left: -1.3em;
+}
+
+.image-text{
+	min-height:177px;
+	margin-bottom:14px;
+}
+
+.image-text div{
+	margin:0 0 1em 1em;
+	float:right;
+/*	display: inline;*/
+}
+
+.image-text p{
+	float:left;
+	width:200px;
+/*   position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);*/
+
+}
+
+.square-pale-yerrow{
+	background-color: #FFF8DD; 
+	padding:20px;
+}
+
+/* -----------------------------------------------------------
+	FAQ
+----------------------------------------------------------- */
+
+#main h6{
+	font-size: 16px;
+	width: 100%;
+	height: 30px;
+	padding:0;
+	margin:0;
+	background: #0057AE;
+	line-height:30px;
+	color:#FFF;
+	text-indent:20px;
+}
+
+.question {
+    padding:5px 20px;
+    font-weight:bold;
+    font-size:14px;
+    border:1px solid #ddd;
+	border-collapse:collapse;
+    background:#eee;
+    cursor: pointer;
+}
+.question:hover {
+	background: #A0DFED;
+}
+
+#faq span{
+	background-color: #666;
+	color:#FFF;
+	font-weight:bold;
+	font-size:13px;
+	padding:0 5px;
+	border-radius:10px;
+}
+.answer {
+	display: none;
+    padding:10px 10px 10px 30px;
+    font-size:13px;
+    border:1px solid #ddd;
+}​
+
+/* -----------------------------------------------------------
+	テクニカルガイド
+----------------------------------------------------------- */
+
+.tech ul{
+	padding-left:20px;
+}
+
+.tech li{
+    padding-left: 17px;
+    text-indent: -17px; 
+	margin-bottom:8px;
+}
+
+.tech li:before{
+	content:"● "; 
+}
+
+ol.li-decimal{
+	margin-left:25px;
+}
+
+.li-decimal li{
+	padding-left:0px;
+	text-indent:0px;
+	list-style-type: decimal;
+}
+
+.li-decimal li:before{
+	content:"";
+}
+
+
+
+/* -----------------------------------------------------------
+	チーム紹介
+----------------------------------------------------------- */
+
+/*.team-tit{
+	font-size:11px;
+	letter-spacing:-1px;
+	color:#ffffff;
+	background-color: #F60;
+	padding:1px 3px 0 3px;
+	display:inline-block;
+	margin:3px 5px 0 0;
+		
+	border-radius: 2px;*/ 
+/*    -webkit-border-radius: 2px;*/ /* Safari,Google Chrome用 */
+/*    -moz-border-radius: 2px;*/ /* Firefox用 */ 
+/*}*/
+
+/*#main .section2{
+	margin: 0 0 1em 0;
+	padding: 0 0 0 0;
+	font-size:13px;	
+	
+	width:360px;
+}
+*/
+.team-name{
+/*	width:100%;*/
+	padding:5px 10px;
+	background-color: #3E9CCA;
+	margin:15px 0 0 0;
+	color:#ffffff;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.num{
+	font-size:16px;
+	color:#ffffff;
+	background-color: #069;
+	padding:2px 5px 0 5px;
+	display:inline-block;
+	margin:0 10px 0 0;
+		
+	border-radius: 2px; 
+    -webkit-border-radius: 2px; /* Safari,Google Chrome用 */
+    -moz-border-radius: 2px; /* Firefox用 */ 
+}
+
+.orange-waku{
+	font-size:12px;
+	color:#ffffff;
+	background-color: #FF9E3E;
+	padding:3px 5px 0px 5px ;
+	display:inline-block;
+	margin-right:1em ;
+    vertical-align:middle;
+	width:85px;
+	text-align:center;
+	font-weight:bold;
+	float:left;
+		
+	border-radius: 2px; 
+    -webkit-border-radius: 2px; /* Safari,Google Chrome用 */
+    -moz-border-radius: 2px; /* Firefox用 */ 	
+}
+
+.robot-name-back{
+	background: #E3E3E3;
+	font-size:16px;
+	font-weight:bold;
+	color: #000;
+}
+
+.cap{
+	padding-left:7.8em;
+}
+
+
+
+/* -----------------------------------------------------------
+	その他
+----------------------------------------------------------- */
+
+.bold{
+	font-weight:bold;
+}
+
+.alpha a:hover{
+	filter: alpha(opacity=70);
+    -moz-opacity:0.70;
+    opacity:0.70;
+	
+}
+
+.gray-frame{
+	border:1px solid #cccccc;
+	margin:0;
+	padding:0;
+}
+
+.gray-frame-02{
+	border:1px solid #cccccc;
+
+}
+
+.en-forum a{
+	width:146px;
+	height:105px;
+	border:5px solid #F60;
+	background: #FFF0E1;
+	padding:10px;
+	color:#F60;
+	font-size:26px;
+	display:block;
+	text-shadow: 1px 1px 0px #bbbbbb;
+}
+
+.en-forum a:hover{
+    text-decoration:none
+}
+
+
+.center{
+	text-align:center;
+	margin:0 auto;
+}
+
+.yellow-stripe{
+	height:35px;
+	font-size:24px;
+	font-weight:bold;
+	color:#000;
+	width:75%;
+	background: #F90;
+	text-align:center;
+	line-height:37px;
+	margin: 0 auto;
+}
+
+.yellow-stripe2{
+	height:auto;
+	font-size:24px;
+	font-weight:bold;
+	color:#000;
+	width:75%;
+	background: #F90;
+	text-align:center;
+	line-height:37px;
+	margin: 0 auto;
+}
+
+.black-stripe24{
+	font-size:24px;
+	font-weight:bold;
+	color: #FC3;
+	width:100%;
+	background: #000;
+	text-align:center;
+	margin:5px 0 0 0;
+	padding:7px 0;
+}
+
+.f-16{
+	font-size:16px;
+}
+
+.f-12{
+	font-size:12px;
+}
+
+.ls-1{
+	letter-spacing:-1px;
+}
+
+.dash-ine{
+	border-bottom:1px dashed #dddddd;
+	margin-bottom:1em;
+}
+
+.dash-ine-bl{
+	border-bottom:1px dashed #666666;
+	margin:1.3em 0;
+}
+
+.shozoku{
+	background-color:#F93;
+	padding:0 8px;
+	font-size:12px;
+	color:#FFF;
+/*	margin:*/
+	
+}
+
+
+

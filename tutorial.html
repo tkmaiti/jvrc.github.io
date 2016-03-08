@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ジャパンバーチャルロボティクスチャレンジ｜チュートリアル</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="keywords" content="ジャパンバーチャルロボティクスチャレンジ,Japan Virtual Robotics Challenge,JVRC,国立研究開発法人新エネルギー・産業技術総合開発機構,NEDO," />
+<meta name="description" content="「ジャパンバーチャルロボティクスチャレンジ（Japan Virtual Robotics Challenge）」（略称JVRC）は国立研究開発法人新エネルギー・産業技術総合開発機構 (NEDO) が実施中の「環境・医療分野の国際研究開発・実証プロジェクト／ロボット分野の国際研究開発・実証事業／災害対応ロボット研究開発（アメリカ）」プロジェクトの一環として実施する災害対応ロボットのコンピュータシミュレーションによる競技会です。" />
+
+<link rel="shortcut icon" href="images/favicon.ico" />
+
+<link href="./css/import.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+
+
+</head>
+<body>
+
+
+<div id="page">
+
+<div id="header">
+<div class="imgArea">
+<a href="index.html">
+<img src="images/img-main.png" alt="メインイメージ" width="1115" height="313" /></a>
+
+<div class="english"><a href="en/tutorial.html"><img src="images/en_flag.png" alt="english" width="21" height="14" />English</a>
+</div><!--/ english-->
+
+</div><!-- / #imgArea -->
+</div><!-- / #header -->
+
+
+<div id="navi">
+<div id="naviArea">
+<ul id="gNav">
+<li><a href="index.html">TOP</a></li>
+<li><a href="rule.html">競技ルール</a></li>
+<li class="current-page"><a href="http://jvrc.github.com/tutorials/html-ja/index.html" target="_blank">チュートリアル</a></li>
+<li><a href="team.html">チーム紹介</a></li>
+<li><a href="download.html">ダウンロード</a></li>
+<li><a href="result.html">進行状況・結果</a></li>
+<li><a href="https://jvrc.github.io/ssl/etr.html"><img src="images/sanka-icon.png" alt="" width="26" height="25" /> 参加申込み</a></li>
+<li><a href="https://jvrc.github.io/ssl/contact.html"><img src="images/inquiry-icon.png" alt="" width="22" height="16" /> お問い合わせ</a></li>
+</ul>
+<!-- / #naviArea --></div>
+<!-- / #navi --></div>
+
+
+<div id="contents" class="clearfix">
+<div id="main">
+
+
+<a name="choreonoid-01" id="choreonoid-01"></a>
+<h2>ロボットシミュレータChoreonoidについて</h2>
+<div class="section2">
+コレオノイドはオープンソースのロボット用統合GUIソフトウェアです。動力学シミュレーション機能や動作振り付け機能を標準で備えており、さらに機能を追加していくことも可能です。<br />
+「ロボット用GUIアプリケーション開発フレームワーク」という側面も持っています。<br />
+<br />
+<p class="center"><img src="images/tutorial/choreonoid-img.png" alt="ロボットシミュレータChoreonoid" width="680" height="469" /></p>
+<p class="PD-L20">「ロボットシミュレータ操作画面」</p>
+<br />
+<p class="center"><img src="images/tutorial/choreonoid-figure.png" alt="ロボットシミュレータChoreonoid" width="680" height="469" class="gray-frame"/></p>
+<p class="PD-L20">「Choreonoid図解」</p>
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-02" id="choreonoid-02"></a>
+<h2>シミュレータとしてのChoreonoidの詳細</h2>
+<div class="section2">
+<table class="t-04">
+<tr>
+<th width="20%" scope="row">関節の動き</th>
+<td width="80%">回転、直動、簡易クローラ</td>
+</tr>
+<tr>
+<th scope="row">センサーの箇所</th>
+<td>力トルクセンサ、ジャイロ、加速度センサ、カメラ（含むRGB-Dカメラ）、レンジファインダ</td>
+</tr>
+<tr>
+<th scope="row">ライト</th>
+<td>OpenGLを用いた簡易的なもの</td>
+</tr>
+<tr>
+<th scope="row">シミュレーションの<br />
+形式</th>
+<td>閉リンク機構</td>
+</tr>
+<tr>
+<th scope="row">形状表現</th>
+<td>ポリゴンによる形状表現</td>
+</tr>
+<tr>
+<th scope="row">記述方式</th>
+<td>ロボット、環境のモデルはVRML97, COLLADAで記述</td>
+</tr>
+<tr>
+<th scope="row">接続に関して</th>
+<td>RTMを用いて実装された制御ソフトウェアと接続可</td>
+</tr>
+<tr>
+<th scope="row">その他の事項</th>
+<td>変形、水中、飛行、電波、風、霧等のシミュレーション機能はなし</td>
+</tr>
+</table>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-03" id="choreonoid-03"></a>
+<h2>ロボットモデルの記述方法</h2>
+<div class="section2">
+<p class="center"><img src="images/tutorial/choreonoid-program.png" alt="ロボットシミュレータChoreonoid" width="680" height="438" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-04" id="choreonoid-04"></a>
+<h2>RTコンポーネントを用いたシミュレーション</h2>
+<div class="section2">
+<p class="center"><img src="images/tutorial/choreonoid-RT.png" alt="ロボットシミュレータChoreonoid" width="680" height="468" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-05" id="choreonoid-05"></a>
+<h2>コントローラと入出力</h2>
+<div class="section2">
+<p class="center"><img src="images/tutorial/choreonoid-con.png" alt="ロボットシミュレータChoreonoid" width="680" height="404" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-06" id="choreonoid-06"></a>
+<h2>コントローラの記述</h2>
+<div class="section2">
+<p class="center"><img src="images/tutorial/choreonoid-con-pro.png" alt="ロボットシミュレータChoreonoid" width="680" height="467" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-07" id="choreonoid-07"></a>
+<h2>Choreonoid操作画面</h2>
+<div class="section2">
+<p class="center"><img src="images/tutorial/choreonoid-ope.png" alt="ロボットシミュレータChoreonoid" width="680" height="546" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-08" id="choreonoid-08"></a>
+<h2>RTコンポーネント構成</h2>
+<div class="section2">
+<p class="center"><img src="images/tutorial/choreonoid-composition.png" alt="ロボットシミュレータChoreonoid" width="680" height="380" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-09" id="choreonoid-09"></a>
+<h2>RTミドルウエアとは？</h2>
+<div class="section2">
+●ロボットシステム構築を効率化するためのソフトウエア開発基盤<br />
+●OMGで国際標準化されたコンポーネントフレームワークを提供（OpenRTMは実装の名前）<br />
+●OSや言語、集中系・分散系に柔軟に対応<br />
+<p class="center"><img src="images/tutorial/RT-01.png" alt="RTミドルウエア" width="680" height="248" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-10" id="choreonoid-10"></a>
+<h2>RTコンポーネント化のメリット</h2>
+<div class="section2">
+<table class="t-04">
+<tr>
+<th scope="row">再利用性の向上</th>
+<td>同じコンポーネントをいろいろなシステムに使いまわせる</td>
+</tr>
+<tr>
+<th scope="row">選択肢の多様化</th>
+<td>同じ機能を持つ複数のコンポーネントを試すことができる</td>
+</tr>
+<tr>
+<th scope="row">柔軟性の向上</th>
+<td>コンポーネント構成をかえるだけで様々なシステムを構築できる</td>
+</tr>
+<tr>
+<th scope="row">信頼性の向上</th>
+<td>コンポーネント単位でテスト可能なため信頼性が向上する</td>
+</tr>
+<tr>
+<th scope="row">堅牢性の向上</th>
+<td>システムがコンポーネントで分割されているので、一つの問題が全体に波及しにくい </td>
+</tr>
+</table>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-11" id="choreonoid-11"></a>
+<h2>RTCの分割と連携</h2>
+<div class="section2">
+<p class="center"><img src="images/tutorial/rtc-cooperation.png" alt="RTミドルウエア" width="680" height="390" /></p>
+<div class="yellow-stripe" >（モジュール）情報の隠蔽と公開のルールが重要</div>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-12" id="choreonoid-12"></a>
+<h2>ツールチェーン</h2>
+<div class="section2">
+<table class="t-04 center">
+<tr>
+<td><img src="images/tutorial/rtc-01.png" alt="" width="321" height="214" /></td>
+<td><img src="images/tutorial/rtc-02.png" alt="" width="300" height="200" /></td>
+</tr>
+<tr>
+<td align="center">RTCBuilder<br />
+RTコンポーネント設計・コード生成 </td>
+<td align="center">
+RTSystemEditor<br />
+RTCを組み合わせてシステムを設計 </td>
+</tr>
+</table>
+<div class="black-stripe24">
+RTC・RTM統合開発環境の整備<br />
+<p class="f-16">RTC設計・実装・デバッグ、RTMによるインテグレーション・デバッグまでを<br />
+一貫して行うことができる統合開発環境をEclipse上に構築 </p></div>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<!--<a name="choreonoid-13" id="choreonoid-13"></a>
+<h2>応用例（研究用プラットフォーム）</h2>
+<div class="section2">
+<table class="t-04 center">
+<tr>
+<td><img src="images/tutorial/01.png" alt="" width="111" height="200" /></td>
+<td><img src="images/tutorial/02.png" alt="" width="110" height="200" /></td>
+<td><img src="images/tutorial/03.png" alt="" width="177" height="200" /></td>
+</tr>
+<tr>
+<td>HRP-2（川田工業）</td>
+<td>HRP-4（川田工業）</td>
+<td>Nextage(川田工業）</td>
+</tr>
+</table><br />
+
+<table class="t-04 center">
+<tr>
+  <td><img src="images/tutorial/04.png" alt="" width="388" height="150" /></td>
+  <td><img src="images/tutorial/05.png" alt="" width="222" height="150" /></td>
+</tr>
+<tr>
+<td>ビュートローバーRTC/RTC-BT(VSTONE)</td>
+<td>OROCHI
+（アールティ） </td>
+</tr>
+</table>
+<br />
+<br />
+</div>--><!--section-->
+
+
+
+<!--<a name="choreonoid-14" id="choreonoid-14"></a>
+<h2>応用例（実応用その他）</h2>
+<div class="section2">
+<table class="t-04 center">
+<tr>
+<td><img src="images/tutorial/06.png" alt="" width="108" height="150" /></td>
+<td><img src="images/tutorial/07.png" alt="" width="101" height="150" /></td>
+<td><img src="images/tutorial/08.png" alt="" width="113" height="150" /></td>
+<td><img src="images/tutorial/09.png" alt="" width="241" height="114" /></td>
+</tr>
+<tr>
+<td>S-ONE：SCHAFT</td>
+<td>HRP-4C：AIST</td>
+<td>TAIZOU：GRX</td>
+<td><span class="bold">DAQ-Middleware：KEK/J-PARC</span><br />
+  <span class="f-12">KEK：High Energy Accelerator Research Organization<br />
+J-PARC： Japan Proton Accelerator Research Complex</span></td>
+</tr>
+</table><br />
+<table class="t-04 center">
+<tr>
+<td><img src="images/tutorial/10.png" alt="" width="180" height="120" /></td>
+<td><img src="images/tutorial/11.png" alt="" width="178" height="120" /></td>
+<td><img src="images/tutorial/12.png" alt="" width="245" height="120" /></td>
+</tr>
+<tr>
+<td>災害対応ロボット操縦シミュレータ：<br />
+NEDO/千葉工大 </td>
+<td>RAPUDA：Life Robotics</td>
+<td>新日本電工他：MobileSEM</td>
+</tr>
+</table><br />
+<table class="t-04 center">
+<tr>
+<td><img src="images/tutorial/13.png" alt="" width="512" height="120" /></td>
+</tr>
+<tr>
+<td>新日本電工他：小型ベクレルカウンタ  </td>
+</tr>
+</table>
+
+<br />
+<br />
+</div>--><!--section-->
+
+
+</div><!-- / #main -->
+
+
+
+<a name="choreonoid" id="choreonoid"></a>
+<div id="sub2">
+<div class="alpha"><a href="#"><img src="images/forum.png" width="176" height="135" alt="フォーラム" /></a></div>
+
+<div class="alpha MG-T5"><a href="https://www.facebook.com/jvrcorg" target="_blank"><img src="images/facebook_ja.png" width="176" height="145" alt="facebook-JVRC" /></a></div>
+
+<h3>チュートリアル</h3>
+<ul>
+<li><a href="#choreonoid-01">ロボットシミュレータChoreonoidについて</a></li>
+<li><a href="#choreonoid-02">シミュレータとしてのChoreonoidの詳細</a></li>
+<li><a href="#choreonoid-03">ロボットモデルの記述方法</a></li>
+<li><a href="#choreonoid-04">RTコンポーネントを用いたシミュレーション</a></li>
+<li><a href="#choreonoid-05">コントローラと入出力</a></li>
+<li><a href="#choreonoid-06">コントローラの記述</a></li>
+<li><a href="#choreonoid-07">Choreonoid操作画面</a></li>
+<li><a href="#choreonoid-08">RTコンポーネント構成</a></li>
+<li><a href="#choreonoid-09">RTミドルウエアとは？</a></li>
+<li><a href="#choreonoid-10">RTコンポーネント化のメリット</a></li>
+<li><a href="#choreonoid-11">RTCの分割と連携</a></li>
+<li><a href="#choreonoid-12">ツールチェーン</a></li>
+<!--<li><a href="#choreonoid-13">応用例（研究用プラットフォーム）</a></li>
+<li><a href="#choreonoid-14">応用例（実応用その他）</a></li>-->
+</ul>
+
+
+</div><!-- / #sub -->
+
+</div><!-- / #contents -->
+
+
+<div class="pageTop alpha">
+<a href="#"><img src="images/go-top.png" alt="トップへ" width="88" height="38" /></a></div>
+
+<div id="footer">
+<div class="sponsor alpha">主催：<a href="http://www.nedo.go.jp/" target="_blank"><img src="images/nedo-logo.png" alt="国立研究開発法人　新エネルギー・産業技術総合開発機構" width="60" height="31"/></a>　国立研究開発法人　新エネルギー・産業技術総合開発機構 　　　　共催：<a href="http://www.meti.go.jp/" target="_blank"><img src="images/keizai-logo.png" alt="経済産業省" width="111" height="33" /></a>
+</div>
+<div class="copyright">Copyright &copy; 2015 Japan Virtual Robotics Challenge. All Rights Reserved.</div>
+<!-- / #footer --></div>
+
+<!-- / #page --></div>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* -----------------------------------------------------------
+	#dropmenu		ドロップダウンメニュー(日本語)
+----------------------------------------------------------- */
+
+#dropmenu{
+  list-style-type: none;
+  width: 955px ;
+  height: 52px;
+  margin: 0 auto;
+  padding: 0;
+  
+    display:table;
+}
+
+#dropmenu li{
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  display:table-cell;
+}
+#dropmenu li a{
+background: url(../images/menu-line.png) no-repeat 0 9px;
+	
+  display: block;
+  margin: 0;
+  padding: 20px 10px 17px 11px;/*メニューの左右アキ調節*/
+  color: #fff;
+	font-size:15px;
+	text-shadow: 1px 1px 2px #000;
+  line-height: 1;
+  text-decoration: none;
+}
+
+#dropmenu li:hover {
+	color: #fff;
+	background-color: rgba(0, 180, 255, 0.6);
+	text-shadow: 1px 1px 2px #000;
+}
+
+#dropmenu li ul{
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+#dropmenu li:last-child{
+	 background: url(../images/menu-line.png) no-repeat right;
+
+}
+
+#dropmenu li:last-child.current-page{
+	 background-color: rgba(0, 180, 255, 0.25);
+
+}
+
+#dropmenu li:last-child:hover{
+	 background-color: rgba(0, 180, 255, 0.6);
+}
+
+#dropmenu li ul li{
+  overflow: hidden;
+  width: 165px;/*ドロップダウンメニューの幅*/
+  height: 0;
+  color: #fff;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  transition: .2s;
+}
+#dropmenu li ul li a{
+  padding: 13px ;
+
+  
+  background: #dddddd;
+  text-align: left;
+  color:#222222;
+  font-size: 13px;
+  text-shadow: none;
+}
+#dropmenu li:hover ul li{
+  overflow: visible;
+  height: auto;
+  border-top: 1px solid #eeeeee;
+}
+
+#dropmenu li:hover ul li:hover, 
+#dropmenu li:hover ul li a:hover {
+background: #89D8E9;/*ホバー時のサブメニューの背景色*/
+}
+
+#dropmenu img{
+	vertical-align:middle;
+}
+
+
+/*右端のメニューの指定*/
+#dropmenu li:last-child ul li{
+  overflow: hidden;
+  width: 151px;/*ドロップダウンメニューの幅*/
+  height: 0;
+  color: #fff;
+}
+
+#dropmenu li:last-child ul li a{
+  padding: 13px ;  
+  background: #dddddd;
+  text-align: left;
+  color:#222222;
+  font-size: 13px;
+  text-shadow: none;
+}
+#dropmenu li:last-child:hover ul li{
+  overflow: visible;
+  height: auto;
+/*  border-top: 1px solid #eeeeee;*/
+}
+
+
+
+
+/* -----------------------------------------------------------
+	#dropmenu-en		ドロップダウンメニュー（英語）
+----------------------------------------------------------- */
+
+#dropmenu-en{
+  list-style-type: none;
+  width: 955px ;
+  height: 52px;
+  margin: 0 auto;
+  padding: 0;
+  
+    display:table;
+}
+
+#dropmenu-en li{
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  display:table-cell;
+}
+
+#dropmenu-en li a{
+background: url(../images/menu-line.png) no-repeat 0 9px;
+	
+  display: block;
+  margin: 0;
+  padding: 20px 31px 17px 30px;/*メニューの左右アキ調節*/
+  color: #fff;
+	font-size:15px;
+	text-shadow: 1px 1px 2px #000;
+  line-height: 1;
+  text-decoration: none;
+
+}
+
+#dropmenu-en li:hover {
+	color: #fff;
+	background-color: rgba(0, 180, 255, 0.6);
+	text-shadow: 1px 1px 2px #000;
+}
+
+#dropmenu-en li ul{
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+#dropmenu-en li:last-child{
+	 background: url(../images/menu-line.png) no-repeat right;
+
+}
+
+#dropmenu-en li:last-child.current-page{
+	background-color: rgba(0, 180, 255, 0.25);
+}
+
+#dropmenu-en li:last-child:hover{
+	 background-color: rgba(0, 180, 255, 0.6);
+}
+
+#dropmenu-en li ul li{
+  overflow: hidden;
+  width: 181px;/*サブメニュー横幅*/
+  height: 0;
+  color: #fff;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  transition: .2s;
+}
+#dropmenu-en li ul li a{
+  padding: 13px ;
+
+  
+  background: #dddddd;
+  text-align: left;
+  color:#222222;
+  font-size: 13px;
+  text-shadow: none;
+}
+#dropmenu-en li:hover ul li{
+  overflow: visible;
+  height: auto;
+  border-top: 1px solid #eeeeee;
+}
+
+#dropmenu-en li:hover ul li:hover, 
+#dropmenu-en li:hover ul li a:hover {
+background: #89D8E9;/*ホバー時のサブメニューの背景色*/
+}
+
+#dropmenu-en img{
+	vertical-align:middle;
+}
+
+
+

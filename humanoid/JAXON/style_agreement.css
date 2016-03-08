@@ -1,0 +1,181 @@
+@charset "shift_jis";
+
+/*------申し込みフォーム-------*/
+
+.form {
+	border-collapse: collapse;
+	width:100%;
+	border: #e3e3e3 1px solid;
+	font-size: 13px;
+	margin:0 auto;
+}
+.form th.t_top {
+    border-top: #203a94 4px solid;
+}
+.form td.t_top {
+	border-top: #b3b3b3 4px solid;
+}
+.form td.aqua{
+	 border-top: #39C 4px solid;
+	 border-left:#e3e3e3 1px solid;
+	 border-bottom: #e3e3e3 1px dotted;
+	 padding: 10px;
+	 font-weight: normal;
+}
+
+.form th{
+	border-bottom: #e3e3e3 1px dotted;
+	text-align: left;
+	padding: 10px;
+	font-weight: normal;
+}
+
+.form td {
+	border-bottom: #e3e3e3 1px dotted;
+	border-left:#e3e3e3 1px solid;
+	text-align: left;
+	padding: 10px;
+}
+.form tr:hover {
+    background: #E9E9E9;
+    color: #666666;
+}
+
+.need{
+	width:20px;
+	font-size:9px;
+	color:#ffffff;
+	background-color:#900;
+}
+.need2{
+	width:100%;
+	margin:0 auto;
+}
+.red{
+	color:#FF0000;
+	}	
+
+.t-center{
+	text-align:center;
+	}	
+	
+.m-b-30{
+	margin-bottom:30px;
+}		
+
+.line{
+border-bottom:1px dashed #cccccc;
+margin:1em 0 20px 0;
+}
+
+dl#ssl dl,dt,dd {
+	margin: 0;
+	padding: 0;
+	font-size:11px;
+	background-color:#EAEAEA;
+}
+
+dl#ssl dl {
+	width: 100%;
+}
+
+dl#ssl dt,dd {
+	padding: 10px;
+}
+
+dl#ssl dt {
+	clear: left;
+	float: left;
+	width: 30%;
+}
+
+dl#ssl dd {
+	margin-left: 90px;
+}
+
+
+/*その他
+---------------------------------------------------------------------------*/
+
+.dash-ine{
+	border-bottom:1px dashed #dddddd;
+	margin-bottom:1em;
+}
+
+.cc-tit{
+	text-align:center;
+	background-color:#96C100;
+	padding:10px 0; 
+}
+
+.cc-tit-02{
+	text-align:center;
+	background-color: #688600;
+	color:#FFF;
+	font-weight:bold;
+	font-size:20px;
+	padding:5px 0;
+}
+
+.cc-gray-flame-s{
+	background-color:#efefef;
+	margin:20px 80px 10px ;
+	padding:8px 0;
+/*	line-height:30px;*/
+	text-align:center;
+}
+
+.cc-gray-flame{
+	background-color:#efefef;
+	margin:10px 0;
+	padding:20px 10px;
+	line-height:1.5em;
+}
+.p-01{
+	padding:10px;
+}
+
+.p-02{
+	padding:10px 0;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.low-alpha ol{
+    padding-left:2em; 
+
+}
+
+.low-alpha li{
+	list-style-type: lower-alpha ; 
+	margin-bottom:8px;
+}
+
+.decimal li{
+	list-style-type: decimal; 
+	margin-bottom:8px;
+}
+
+.upper-alpha li{
+	list-style-type: upper-alpha; 
+	margin-bottom:8px;
+	margin-left:20px;
+}
+
+.u-line{
+	text-decoration:underline;
+}
+
+.lower-roman li{
+	list-style-type: lower-roman; 
+	margin-bottom:8px;
+	margin-left:30px;	
+}
+
+
+
+
+
+
+
+

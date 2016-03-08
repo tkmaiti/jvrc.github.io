@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ジャパンバーチャルロボティクスチャレンジ｜競技ルール</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="keywords" content="ジャパンバーチャルロボティクスチャレンジ,Japan Virtual Robotics Challenge,JVRC,国立研究開発法人新エネルギー・産業技術総合開発機構,NEDO," />
+<meta name="description" content="「ジャパンバーチャルロボティクスチャレンジ（Japan Virtual Robotics Challenge）」（略称JVRC）は国立研究開発法人新エネルギー・産業技術総合開発機構 (NEDO) が実施中の「環境・医療分野の国際研究開発・実証プロジェクト／ロボット分野の国際研究開発・実証事業／災害対応ロボット研究開発（アメリカ）」プロジェクトの一環として実施する災害対応ロボットのコンピュータシミュレーションによる競技会です。" />
+
+<link rel="shortcut icon" href="images/favicon.ico" />
+
+<link href="./css/import.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+
+<!--ズーム-->
+<script src="js/FancyZoom.js" type="text/javascript"></script>
+<script src="js/FancyZoomHTML.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+$(function(){ 
+$('.zoom a img').before('<img src="images/zoom/zoom_icon.png" alt="image" width="23" height="21" class="zoom_icon" />'); 
+}) 
+</script> 
+<!--/ズーム-->
+</head>
+<body onload="setupZoom()">
+
+
+<div id="page">
+
+<div id="header">
+<div class="imgArea">
+<a href="http://jvrc.github.io/index.html">
+<img src="images/img-main.png" alt="メインイメージ" width="1115" height="313" /></a>
+
+<div class="english"><a href="en/rule.html"><img src="images/en_flag.png" alt="english" width="21" height="14" />English</a>
+</div><!--/ english-->
+
+</div><!-- / #imgArea -->
+</div><!-- / #header -->
+
+<div id="r1"></div>
+<div id="navi">
+<ul id="dropmenu">
+<li><a href="http://jvrc.github.io/index.html">TOP&nbsp;<img src="images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="about.html">ＪＶＲＣについて</a></li>
+  </ul>
+</li>
+<li class="current-page"><a href="rule.html">競技ルール&nbsp;<img src="images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="tech-guide.html">JVRCテクニカルガイド</a></li>
+  </ul>
+</li>
+<li><a href="http://jvrc.github.com/tutorials/html-ja/index.html" target="_blank">チュートリアル</a></li>
+<li><a href="team.html">チーム紹介</a></li>
+<li><a href="download.html">ダウンロード</a></li>
+<li><a href="result.html">進行状況・結果</a></li>
+<li><a href="faq.html">よくあるご質問(FAQ)</a></li>
+<li><a href="https://jvrc.github.io/ssl/contact.html"><img src="images/inquiry-icon.png" alt="" width="22" height="16" />&nbsp;お問い合わせ&nbsp;<img src="images/sankaku.png" alt="" width="8" height="6" /></a>
+  <ul>
+  <li><a href="https://jvrc.github.io/ssl/etr.html"><img src="images/sanka-icon.png" alt="" width="26" height="21" />&nbsp;参加申込み</a></li>
+  </ul>
+</li>
+</ul>
+<!-- / #navi --></div>
+
+
+<div id="contents" class="clearfix">
+<div id="main">
+
+<h2>1. はじめに<!--：JVRC競技タスク開発の背景-->
+<span class="f-16">（JVRC ルール概要Ver. 1.3）</span>
+</h2>
+<div class="section">
+<p>　JVRC（Japan Virtual Robotics Challenge）におけるシナリオ設定するにあたり、トンネル災害を取り上げることとした。<br /><br />
+<img src="images/rule/tunnel.jpg" alt="トンネル" width="289" height="191" class="imgR" />　日本では、高度成長期以降に整備されたインフラ設備は、20年後に建設後50年を経過する割合が加速度的に高くなる。これら社会インフラの崩壊や機能不全は人命や社会に大きな影響を及ぼすことから、適切な維持管理の必要性が望まれている。しかし、維持管理を担当する技術者の高齢化による人材不足が指摘されている。また、維持管理に必要となる技術の継承が不十分な現状である。日本では、主要なインフラ構造に関しては、数年毎に定期的な点検を行っているが、その頻度は急激な劣化進行等の以上を把握するためには十分ではなく、さらに、目視点検が困難な箇所も存在する。一方、災害時においては、緊急点検に時間を要し、迅速な復旧が困難であるといった課題が指摘されている。このような背景から、日本では、2014年から、国土交通省と経済産業省が連携し、社会インフラ構造物に対するロボット技術応用を推進する研究開発プロジェクトとして、「次世代社会インフラ用ロボットの現場検証・評価プロジェクト」が始まった。「NEDOロボット白書2014」にもロボットの活用例の１つとして、インフラ、土木建築、災害対応、農業分野におけるフィールドロボットが取り上げられている。また、COCN報告書「災害対応ロボットと運用システムのあり方」では、社会インフラの老朽化に伴い、ロボット技術の活用は、人がアクセス困難な箇所で有効であり、その要求される能力は、災害対応ロボットとしての転用が十分可能であると述べている。災害対応ロボット技術が、社会インフラ構造物の「災害対応ロボットセンター設立構想」付録表４−１「想定災害とロボットの関連細分表（建造物・土木インフラ災害）：全国的発生頻度・規模」より、トンネル事故は年に数回発生する可能性があることから、使用頻度の高いインフラ用メンテナンスロボットに対して、災害対応ロボット技術の転用を図ることにより、災害対応ロボットの社会実装の実現が期待されるものと考える（「災害対応ロボットの社会実装」）。<br />
+<br />
+　特に、狭隘閉所空間に対する探査ロボットによるモニタリング技術は、災害時の瓦礫内やインフラ配管設備・橋梁などの狭隘・閉所箇所の点検・メンテナンス、危険箇所の内部調査が期待され、重点化すべき分野だと考える。
+<div id="r2"></div>
+</p>
+</div><!--section-->
+
+
+<h2>2. シナリオ</h2>
+<div class="section">
+<p>　山岳地帯の点検設備が不十分な対面通行のトンネルを対象とする。トンネル延長は700mを想定し、トンネル内の道路はカーブしているものとする。災害の想定は、地震によるトンネル壁面の崩落が発生し、走行中の車両に落下し、壁面に衝突、後継車両による多重衝突事故である。事故車両の一部には、タンクローリー、大型トラックが含まれている。タンクローリーの横転、積載物が散乱している。事故車両には取り残されている人がいる。火災や爆発の危険性があるために、トンネル入口付近からロボットを遠隔操作し調査を行う。<br />
+<br />
+<img src="images/rule/Task_R1_s.png" alt="" width="740" height="143" /><br />
+<table class="center">
+<tr>
+<td><img src="images/rule/R4/A/Task_R4_A_3.jpg" alt="" width="350" height="177" class="MG-R10 gray-frame-02" /></td>
+<td><img src="images/rule/R3/A/Task_R3_A_4.jpg" alt="" width="350" height="177"  class="gray-frame-02"  /></td>
+</tr>
+</table>
+<div id="r3"></div> 
+</p>
+</div><!--section-->
+
+
+
+
+<h2>3．等価タスク</h2>
+<div class="section">
+<p>　実際の調査では目視以外に打音検査等が行われるが、このようなタスクをシミュレータ内で正確に再現する事は困難である。一方、打音検査等をロボットで実際に実施する場合、検査対象に対してロボットのエンドエフェクターを指定された位置と向きで保持する事が打音検査タスクの基盤技術となる。よってここでは、 シミュレータで再現が困難な実タスクに対し、シミュレータで実現可能で、かつ実タスクに対応するロボットの基盤技術を評価する新たなタスクを「等価タスク」と呼称して、実タスクの代わりにシミュレータ上で用いる。 </p>
+<table class="MG-T20">
+  <tr>
+<td class=" square-blue">
+JVRCの等価タスクはQRコードとパイプで構成される「ターゲット」の目視調査とする。「ターゲット」のQRコードの大きさとパイプの長さは下記のいずれかとする。
+</td>
+<td>
+<img src="images/rule/Task_R2_L_3_s.png" alt="QRコードとパイプで構成される「ターゲット」" width="250" height="126" class="imgR" />
+</td>
+</tr>
+</table>
+
+<table class="t-04 MG-T10 MG-B30 ">
+<tr>
+<th scope="row">QRコードの幅<br />
+（対応するパイプの内径＝QRコードの対角線の長さ） </th>
+<td>140mm(200mm)、 35mm(50mm)、 7mm(10mm)</td>
+</tr>
+<tr>
+<th scope="row">パイプ長さ</th>
+<td>100mm、50mm、0mm</td>
+</tr>
+</table>
+
+<div class="square-pale-yerrow" ><span class="TXT-RED">※参考：ターゲットの「視野角」（パイプの底のQRコード全体を見ることが可能な角度）</span>
+<table class="t-04 MG-T10 center">
+  <tr>
+<th colspan="2" scope="col">&nbsp;</th>
+<th colspan="3" scope="col">　　　　　　　QRコードの幅（対応するパイプの内径）</th>
+</tr>
+<tr>
+<th colspan="2" scope="row">&nbsp;</th>
+<td width="26%" class="bold">140mm(200mm)</td>
+<td width="23%" class="bold">35mm(50mm)</td>
+<td width="21%" class="bold">7mm(10mm)</td>
+</tr>
+<tr>
+<th width="16%" rowspan="2" scope="row">　パイプ長さ</th>
+<td width="14%" class="bold">100mm</td>
+<td>90&deg;</td>
+<td>30&deg;</td>
+<td>6&deg;</td>
+</tr>
+<tr>
+<td class="bold">50mm</td>
+<td>126&deg;</td>
+<td>52&deg;</td>
+<td>12&deg;</td>
+</tr>
+</table>
+</div>
+<div id="r4"></div> 
+</div><!--section-->
+
+
+<h2>４．競技タスク</h2>
+<div class="section">
+<p class="MG-B10">競技の基本的な流れは以下の通りである</p>
+<table class="t-04">
+<tr>
+<th width="49" valign="top" scope="row"><span class="num">１</span></th>
+<td valign="top">競技フィールドにはロボットの移動経路を示す「ゲート」が置かれている。ゲートは「青ポール」と「赤ポール」で構成されている。青ポールを左に見てゲートを通過する経路が、ロボットの通るべき経路である。 </td>
+<td><img src="images/rule/Task_R3_A_2_s.png" alt="" width="120" height="100" class="gray-frame-02" /></td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">２</span></th>
+<td valign="top">ゲートのポール上部にはゲート番号の旗がついている。ロボットはゲート番号順にゲートを通過しなければならない。</td>
+<td><img src="images/rule/TaskR1-3_s.png" alt="" width="120" height="100"  class="gray-frame-02" /></td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">３</span></th>
+<td colspan="2" valign="top">ロボットがゲートを通過したとは、ゲート間をロボット全体が通過した場合を意味する。</td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">４</span></th>
+<td colspan="2" valign="top">競技開始前にロボットはスタートラインの手前で待機する。スタートラインはゲート番号１のゲートのポール間のラインである。競技開始の合図まではロボットはスタートラインを越えてはならない。</td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">５</span></th>
+<td colspan="2" valign="top">競技開始の合図の後、ロボットはスタートラインを超え競技タスクを実行することができる。</td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">６</span></th>
+<td colspan="2" valign="top">ロボットがゴールラインを通過する、もしくは制限時間が過ぎたら、競技タスクが終了したとする。ゴールラインはフィールド内で最も番号の大きいゲート番号を有するゲートのポール間のラインである。</td>
+</tr>
+<tr>
+<th valign="top" scope="row"><span class="num">７</span></th>
+<td colspan="2" valign="top">各フィールドの原点はスタートライン中央部である。原点には識別可能なマーカーが示されている。</td>
+</tr>
+</table>
+<p class="MG-T10">参考：<a href="http://www.mlit.go.jp/common/001044575.pdf" target="_blank">国土交通省、 道路トンネル定期点検要領</a></p>
+<p class="MG-T20">
+<span class="TXT-ORG bold">各競技タスクの記号は以下の様に表す。</span><br />
+<span class="bold">（ タスクの調査 ， 作業項目 ）_（ フィールドの状態 ) </span><br /><br />
+（例）R2-1_M-s　→　正常状態にある普通車の車両外の状態
+<div id="r4-1-1"></div> 
+</p>
+</div><!--section-->
+
+
+
+<h2>4-1. 平常時のタスク （タスク記号：O）</h2>
+<h4>タスク O1：目視検査</h4>
+<div class="section">
+<p>
+<table class="t-05" >
+<tr>
+<th scope="row">目的</th>
+<td>トンネル壁面および路面のひび割れ等に対する目視検査をする。</td>
+</tr>
+<tr>
+<th scope="row">
+内容
+</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>壁面付近に指定された区間内にあるターゲットの健全性の診断を行い、調査結果を報告する。 </li>
+<li><span>●</span>壁面には1.2m間隔で6箇所（3x2）、路面には3箇所あるターゲットを調査し、その結果を報告する。 </li>
+<li><span>●</span>調査項目は以下の通り</li>
+</ol>
+</div>
+<p class="PD-L20">
+<span class="TXT-aqua bold">【O1-1】</span> 壁面のひび割れ、うき、漏水等 <br />
+<span class="TXT-aqua bold">【O1-2】</span> 路面のひび割れ、沈下、漏水等 </p></td>
+</tr>
+<tr>
+<th scope="row">
+フィールドの状態、仕様</th>
+<td>
+<div class="image-text">
+<p>●幅約3.6mのトンネル区間を使用する。</p>
+<div class="zoom"><a href="images/rule/O1/TaskO1-1.jpg"><img src="images/rule/O1/TaskO1-1.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●ターゲットは、トンネルの壁面と路面の高さ0mmから2400mmの範囲に設置されている。</p>
+<div class="zoom"><a href="images/rule/O1/TaskO1-2.jpg"><img src="images/rule/O1/TaskO1-2.jpg" alt="" width="350" height="177"/></a>
+</div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●「道路トンネル定期点検要領」に基づいた診断結果が記述されているターゲットを読み取り、位置と内容を報告する。</p>
+<div class="zoom"><a href="images/rule/O1/TaskO1-3.jpg"><img src="images/rule/O1/TaskO1-3.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+
+<p>●トンネル図面は公開する。</p>
+</td>
+</tr>
+<tr>
+<th scope="row">タスクの達成</th>
+<td>
+全てのターゲットに関する調査結果を提出し、ゴールまで移動。 
+</td>
+</tr>
+<tr>
+<th scope="row">得点</th>
+<td>
+● 達成時間で順位をつけ、その順位に点数を与える。<br /> 
+● 調査したターゲットに対する誤答数に応じて、時間が加算される。 
+</td>
+</tr>
+</table>
+<p class="MG-T10">参考：<a href="http://www.mlit.go.jp/common/001044575.pdf" target="_blank">国土交通省、 道路トンネル定期点検要領</a> </p>　
+<div id="r4-1-2"></div> 
+</p>
+</div><!--section-->
+
+
+<h4>タスク O２：打音検査</h4>
+<div class="section">
+<table class="t-05" >
+<tr>
+<th scope="row">目的</th>
+<td><p align="left">天井付近にあるトンネル内付属物取り付け部の状態を確認するため、ボルト締結部や壁面のはく離等に対する打音検査を行う。 </p></td>
+</tr>
+<tr>
+<th scope="row"> 内容 </th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>トンネル内付属物取り付け部の取り付け部材付近にあるターゲットの調査を行い（健全性の診断）、調査結果を報告する。 </li>
+<li><span>●</span>提出する調査結果は「道路トンネル定期点検要領」の「点検調書」の様式に準じて表記する。 </li>
+<li><span>●</span>ターゲットの調査では、取り付け部材を避けながら調査することが必要である。 </li>
+</ol>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row"> フィールドの状態、仕様</th>
+<td>
+<div class="image-text">
+<p>●幅約3.6mのトンネル区間を使用する。</p>
+<div class="zoom"><a href="images/rule/O2/TaskO2-2.jpg"><img src="images/rule/O2/TaskO2-2.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●トンネル内付属物は、取り付け部材により天井部に取り付けられている。</p>
+<div class="zoom"><a href="images/rule/O2/TaskO2-3.jpg"><img src="images/rule/O2/TaskO2-3.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●ターゲットは、取り付け部材近傍に設置されている。</p>
+<div class="zoom"><a href="images/rule/O2/TaskO2-4.jpg"><img src="images/rule/O2/TaskO2-4.jpg" alt="" width="350" height="177" class="  gray-frame" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●「道路トンネル定期点検要領」に基づいた診断結果がターゲットに記述されている。それを読み取り、位置と内容を報告する。</p>
+<div class="zoom"><a href="images/rule/O2/TaskO2-5.jpg"><img src="images/rule/O2/TaskO2-5.jpg" alt="" width="350" height="177" /></a></div>
+</div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●トンネル図面は公開する。</p>
+<div class="zoom"><a href="images/rule/O2/TaskO2-6.jpg"><img src="images/rule/O2/TaskO2-6.jpg" alt="" width="350" height="177" class="gray-frame-02"   /></a></div></div>
+<!--<div class="dash-ine "></div>-->
+
+<div class="image-text">
+<p>●天井への足場はフィールド内に用意されている。</p>
+<div class="zoom"><a href="images/rule/O2/TaskO2-1.jpg"><img src="images/rule/O2/TaskO2-1.jpg" alt="" width="350" height="177"/></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">タスクの達成</th>
+<td>
+全てのターゲットに関する調査結果を提出し、ゴールまで移動。
+</td>
+</tr>
+<tr>
+<th scope="row">得点</th>
+<td>
+● 達成時間で順位をつけ、その順位に点数を与える。
+  <br />
+  ● 調査したターゲットに対する誤答数に応じて、時間が加算する。 </td>
+</tr>
+</table>
+<div id="r4-2-1"></div> 
+</div><!--section-->
+
+
+<h2>４-２ 災害時のタスク （タスク記号：R）</h2>
+<!--<h4>タスク R1：長距離移動</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">目的</th>
+<td>障害物を回避しながら長距離を移動する。 </td>
+</tr>
+<tr>
+<th scope="row">  内容 </th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>スタートから、ゴールまでに規定の時間内に移動する。 </li>
+<li><span>●</span>道路には車が放置されており、これらの車両を避け移動する。 </li>
+<li><span>●</span>あらかじめフィールド内に用意された車両を利用して移動しても良い。 </li>
+<li><span>●</span>ロボットが車両を使用する場合は、ロボットが車両に乗車した状態で競技を開始することができる。 </li>
+</ol>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row"> フィールドの状態、仕様</th>
+<td>
+
+
+<div class="image-text">
+<p>
+●道路は1車線の幅が3ｍで対面通行の2車線で左右に幅が1ｍの側道がある。<br /><br />
+●道路の長さは100m。<br /><br />
+●スタートからゴールまで緩やかにカーブしている。
+</p>
+<div class="zoom"><a href="images/rule/R1/TaskR1-1.jpg"><img src="images/rule/R1/TaskR1-1.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+</div>
+
+<div class="image-text">
+<p>
+<br />
+●スタートとゴールの高さは等しく、スタートから50ｍ地点はスタートの高さより1m高い。<br />
+<br />
+●フィールド内の明るさは非常灯程度である。
+</p>
+<div class="zoom"><a href="images/rule/R1/TaskR1-2.jpg"><img src="images/rule/R1/TaskR1-2.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R1/TaskR1-3.jpg"><img src="images/rule/R1/TaskR1-3.jpg" alt="" width="350" height="177" class=" gray-frame-02 " /></a></div>
+
+<div class="zoom"><a href="images/rule/R1/TaskR1-4.jpg"><img src="images/rule/R1/TaskR1-4.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R1/TaskR1-5.jpg"><img src="images/rule/R1/TaskR1-5.jpg" alt="" width="350" height="177" class=" gray-frame-02 " /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">タスクの達成</th>
+<td>規定された時間内にゴールまで移動。
+</td>
+</tr>
+<tr>
+<th scope="row">得点</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>達成時間で順位をつけ、その順位に点数を与える。</li>
+<li><span>●</span>時間内ゴールに到達できない場合、到達位置（チェックポイント）により得点を与える。チェックポイントはゴールを含み3箇所設置する。</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+<div id="r4-2-2"></div> 
+</div>--><!--section-->
+
+
+<h4>タスク R1：車両調査</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">目的</th>
+<td>車両の損傷状態、燃料等の漏出、車両外部の要救助者の探索をするために、車両の外観および周辺の状態を確認する。また、車両内部にいる要救助者の有無を確認する。</td>
+</tr>
+<tr>
+<th scope="row"> 内容 </th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>指定された位置からスタートし、車両について定められた(1)～(3)の3つ調査項目について調査、報告し、ゴールまで移動する。 </li>
+<li><span>●</span>車両がトンネル内に放置されている。</li>
+<li><span>●</span>調査項目は以下の通り </li>
+</ol>
+</div>
+<div class="dash-ine "></div>
+
+<div class="image-text">
+<p>
+<span class="bold TXT-aqua">【R1-1】車両外の状態 </span><br />
+・車両外にある４箇所にあるターゲットを認識し、その内容を報告する。</p>
+<div class="zoom"><a href="images/rule/R2/L/Task_R2_L_1.jpg"><img src="images/rule/R2/L/Task_R2_L_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R2/L/Task_R2_L_2.jpg"><img src="images/rule/R2/L/Task_R2_L_2.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R2/L/Task_R2_L_3.jpg"><img src="images/rule/R2/L/Task_R2_L_3.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R2/L/Task_R2_L_4.jpg"><img src="images/rule/R2/L/Task_R2_L_4.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R2/L/Task_R2_L_5.jpg"><img src="images/rule/R2/L/Task_R2_L_5.jpg" alt="" width="350" height="177" class=" gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R2/L/Task_R2_L_6.jpg"><img src="images/rule/R2/L/Task_R2_L_6.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B20" /></a></div>
+</div>
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+
+<div class="image-text">
+<p>
+<span class="bold TXT-aqua">【R1-2】 車両内の状態 </span><br />
+・車両内にあるターゲットを認識し、その内容を報告する。<br /><br />
+・ターゲットは以下の5箇所に配置されている。<br />
+<span class=" bold">【R1-2A】</span>運転席<br />
+<span class=" bold">【R1-2B】</span>助手席 <br />
+<span class=" bold">【R1-2C】</span>後部座席 <br />
+<span class=" bold">【R1-2D】</span>運転席、助手席足下 <br />
+<span class="bold">【R1-2E】</span> 後部座席足下
+</p>
+<div class="zoom"><a href="images/rule/R2/M/Task_R2_M_1.jpg"><img src="images/rule/R2/M/Task_R2_M_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R2/M/Task_R2_M_2.jpg"><img src="images/rule/R2/M/Task_R2_M_2.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R2/M/Task_R2_M_3.jpg"><img src="images/rule/R2/M/Task_R2_M_3.jpg" alt="" width="350" height="177"/></a></div>
+
+<div class="zoom"><a href="images/rule/R2/M/Task_R2_M_4.jpg"><img src="images/rule/R2/M/Task_R2_M_4.jpg" alt="" width="350" height="177"/></a></div>
+
+<div class="zoom"><a href="images/rule/R2/M/Task_R2_M_5.jpg"><img src="images/rule/R2/M/Task_R2_M_5.jpg" alt="" width="350" height="177"/></a></div>
+
+<div class="zoom"><a href="images/rule/R2/M/Task_R2_M_6.jpg"><img src="images/rule/R2/M/Task_R2_M_6.jpg" alt="" width="350" height="177" class="gray-frame-02"/></a></div>
+</div>
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+
+<p class="bold TXT-aqua">【R1-3】 車両の位置 </p>
+<div class="maru-no">
+<ol>
+<li><span>●</span>スタート位置と車両外にあるターゲットの定量的な位置を報告する。 </li>
+<li><span>●</span>定量的な位置とはスタート地点を原点 (0, 0 ,0) とした時のターゲットの位置の3次元座標 (x, y, z) である。また、定性的な車両の状態がわかる3次元の地図情報を提出する。 </li>
+<li> </li>
+</ol>
+</div>
+
+</td>
+</tr>
+<tr>
+<th scope="row">フィールドの状態、仕様</th>
+<td>
+放置されている車両の種類は <br />
+　<span class="bold">【M】</span>普通車　 <br />
+　<span class="bold">【L】</span> 大型車 <br />
+であり、車両の状態は、<br />
+　<span class="bold">【s】</span> 定常（タイヤが路面に接している）<br />
+　<span class="bold">【u】</span> 横転 <br />
+である。</td>
+</tr>
+<tr>
+<th scope="row">タスクの達成</th>
+<td><div class="maru-no">
+<ol>
+<li><span>●</span>調査項目【R1-1】、【R1-2】、【R1-3】のいずれか、または全てを実施しゴールまで移動。 </li>
+<li><span>●</span>調査項目【R1-1】、【R1-2】 はターゲットの状態の報告。 </li>
+<li><span>●</span>調査項目【R1-3】 はターゲットの3次元座標の報告と車両状態の3次元情報の報告。 </li>
+</ol>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">得点</th>
+<td>
+● ターゲットの確認報告により得点。 <br />
+● すべての調査項目を実施した場合のみ、タイムに応じて加点（ボーナスポイント）。
+</td>
+</tr>
+</table>
+<div id="r4-2-2"></div> 
+</div><!--section-->
+
+
+
+<h4>タスク R2：障害走破</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">目的</th>
+<td>災害対応ロボットに求められる、不整地への対応能力を評価する。</td>
+</tr>
+<tr>
+<th scope="row"> 内容 </th>
+<td>指定された位置からスタートし、障害物上または障害物による狭隘空間内を移動し、ゴールまで移動する。
+</td>
+</tr>
+<tr>
+<th scope="row"> フィールドの状態、仕様</th>
+<td>
+設定されたルートに沿って次の３種類の障害を走破する。<br /><br />
+<div class="image-text">
+<p><span class="TXT-aqua bold">【R2_A】<br />
+クロッシングランプフィールド </span><br />
+頂点および谷の角度が15度の傾斜路で構成される障害 <br /><br />
+<span class="TXT-aqua bold">【R2_B】 <br />
+DRCステップフィールド</span><br />
+40cm四方の15度の傾斜を有するブロックで構成されるステップ状の障害</p>
+<div class="zoom"><a href="images/rule/R3/A/Task_R3_A_1.jpg"><img src="images/rule/R3/A/Task_R3_A_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R3/A/Task_R3_A_2.jpg"><img src="images/rule/R3/A/Task_R3_A_2.jpg" alt="" width="350" height="177" class="gray-frame-02"/></a></div>
+
+<div class="zoom"><a href="images/rule/R3/A/Task_R3_A_3.jpg"><img src="images/rule/R3/A/Task_R3_A_3.jpg" alt="" width="350" height="177" class="gray-frame-02"/></a></div>
+
+<div class="zoom"><a href="images/rule/R3/A/Task_R3_A_4.jpg"><img src="images/rule/R3/A/Task_R3_A_4.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B20" /></a></div>
+</div>
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+<div class="image-text">
+<p>
+<span class="TXT-aqua bold">【R2_C】<br />
+ナロースペースフィールド </span>
+900mmモジュールで構成される、通り抜け可能な直径60cmのパイプを含み、2x4規格の角材で構成される狭隘空間を模した障害。 </p>
+<div class="zoom"><a href="images/rule/R3/B/Task_R3_B_1.jpg"><img src="images/rule/R3/B/Task_R3_B_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R3/B/Task_R3_B_2.jpg"><img src="images/rule/R3/B/Task_R3_B_2.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R3/B/Task_R3_B_3.jpg"><img src="images/rule/R3/B/Task_R3_B_3.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R3/B/Task_R3_B_4.jpg"><img src="images/rule/R3/B/Task_R3_B_4.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">タスクの達成</th>
+<td>
+スタート位置からゴール位置までの走破。
+</td>
+</tr>
+<tr>
+<th scope="row">得点</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>達成時間で順位をつけ、その順位に点数を与える 。</li>
+<li><span>●</span>時間内ゴールに到達できない場合、到達位置（チェックポイント）により得点を与える。チェックポイントはゴールを含み3箇所設置する。</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+<div id="r4-2-3"></div> 
+</div><!--section-->
+
+
+
+<h4>タスク R3：道具を使用した車両調査</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">目的</th>
+<td>人が通常使用する道具を使用し、事故車両内の状態を確認する。</td>
+</tr>
+<tr>
+<th scope="row"> 内容 </th>
+<td>
+● 道具を使用して、事故車両内の状態を調査する。<br />
+● 使用する道具は以下であり、フィールド内に用意されている。<br />
+<p class="MG-L20">
+・　スプレッダー <br />
+・　ハシゴ 
+</p>
+● 調査項目は以下の通り<br />
+<br />
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+<div class="image-text">
+<p><span class="TXT-aqua bold">
+【R3_A】<br />
+車両が変形している場合 </span><br />
+・スプレッダーをロボットで把持し、車両に移動する。<br />
+<br />
+・スプレッダーで、車両のドアを破壊する。<br />
+<br />
+・ドアの破壊のためには、スプレッダーを指定された場所で指定された向きで把持し、スプレッダーのスイッチを操作する。<br />
+<br />
+・破壊によりできた開いたドアから車内のターゲットを確認し、報告する。
+</p>
+<div class="zoom"><a href="images/rule/R4/A/Task_R4_A_1.jpg"><img src="images/rule/R4/A/Task_R4_A_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R4/A/Task_R4_A_2.jpg"><img src="images/rule/R4/A/Task_R4_A_2.jpg" alt="" width="350" height="177" class="gray-frame-02"/></a></div>
+
+<div class="zoom"><a href="images/rule/R4/A/Task_R4_A_3.jpg"><img src="images/rule/R4/A/Task_R4_A_3.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B20"/></a></div>
+</div>
+<div class=" clearfix"></div>
+<div class="dash-ine "></div>
+
+
+<div class="image-text">
+<p><span class="TXT-aqua bold">
+【R3_B】<br />
+大型車が横転している場合</span><br />
+・ハシゴを登り上部の窓から車内のターゲットを確認し、報告する。<br />
+<br />
+・ハシゴを使用せずに上部の窓から車内の調査ができる場合は、ハシゴは使用しなくても良い。
+</p>
+<div class="zoom"><a href="images/rule/R4/B/Task_R4_B_1.jpg"><img src="images/rule/R4/B/Task_R4_B_1.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R4/B/Task_R4_B_2.jpg"><img src="images/rule/R4/B/Task_R4_B_2.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R4/B/Task_R4_B_3.jpg"><img src="images/rule/R4/B/Task_R4_B_3.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R4/B/Task_R4_B_4.jpg"><img src="images/rule/R4/B/Task_R4_B_4.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R4/B/Task_R4_B_5.jpg"><img src="images/rule/R4/B/Task_R4_B_5.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+</div>
+
+</td>
+</tr>
+<tr>
+<th scope="row"> フィールドの状態、仕様</th>
+<td>
+● スプレッダーはフィールド内の台の上に置かれている。<br />
+● ハシゴは車両に事前に取り付けられている。
+<br />
+<br />
+<p><span class="TXT-aqua bold">
+【R3_A】車両が変形している状態 </span><br />
+● スプレッダーを必ず使用する 。<br />
+● 指定された場所（複数）を切断し、車内のターゲットを確認し、報告する。<br />
+<br />
+<span class="TXT-aqua bold">【R3_B】大型車が横転している状態</span><br />
+● はしごを使用して上部の窓から車内のターゲットを確認し、報告する。<br />
+● はしごを使用せずにタスクを達成できる場合は、はしごは使用しなくても良い。<br />
+</p>
+
+
+
+</td>
+</tr>
+<tr>
+<th scope="row">タスクの達成</th>
+<td>
+規定時間内にターゲットを確認、報告しゴールまで移動する。
+</td>
+</tr>
+<tr>
+<th scope="row">得点</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>ターゲットの確認、報告により得点。</li>
+<li><span>●</span>すべての調査項目を実施した場合のみ、タイムに応じて加点する（ボーナスポイント）。</li></ol>
+</div>
+</td>
+</tr>
+</table>
+<div id="r4-2-4"></div> 
+</div><!--section-->
+
+
+
+<h4>タスク R4：経路確保</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">目的</th>
+<td>指定された経路内にある障害物を除去し、作業、避難ルートを確保する。</td>
+</tr>
+<tr>
+<th scope="row"> 内容 </th>
+<td>
+● 指定された経路内にある障害物を抜去、移動し通路を確保する。<br />
+● 障害物の形状と質量は以下のとおり。<br />
+<p class="MG-L20">
+<span class="bold">【A】</span>抜去する障害物は&rdquo;L&rdquo;字型で質量は3kg<br />
+<span class="bold">【B】</span>移動する障害物は&rdquo;L&rdquo;字型で質量は10kg</p>
+</td>
+</tr>
+<tr>
+<th scope="row">フィールドの状態、仕様</th>
+<td>
+<div class="image-text">
+<p>●障害物を除去すべき指定された経路は、フィールド内の色で指定されている。
+</p> 
+<div class="zoom"><a href="images/rule/R5/Task_R5_1.jpg"><img src="images/rule/R5/Task_R5_1.jpg" alt="" width="350" height="177"  class="gray-frame-02" /></a></div>
+</div>
+
+<div class="image-text">
+<p>●指定された経路の周囲には固定された構造物があり、ロボットや除去すべき障害物の移動に制約を与える。
+</p> 
+<div class="zoom"><a href="images/rule/R5/Task_R5_2.jpg"><img src="images/rule/R5/Task_R5_2.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R5/Task_R5_3.jpg"><img src="images/rule/R5/Task_R5_3.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+
+<div class="zoom"><a href="images/rule/R5/Task_R5_4.jpg"><img src="images/rule/R5/Task_R5_4.jpg" alt="" width="350" height="177" class="gray-frame-02" /></a></div>
+</div>
+</td>
+</tr>
+<tr>
+<th scope="row">タスクの達成</th>
+<td>指定された経路内にある障害物を除去し、ゴールまで移動。</td>
+</tr>
+<tr>
+<th scope="row">得点</th>
+<td>
+<div class="maru-no">
+<ol>
+<li><span>●</span>指定された経路内から障害物を除去することで得点。 </li>
+<li><span>●</span>すべての調査項目を実施した場合のみ、タイムに応じて加点する（ボーナスポイント）。 </li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+<div id="r4-2-5"></div> 
+</div><!--section-->
+
+
+
+<h4>タスク R5：消火活動の補助</h4>
+<div class="section">
+<table class="t-05">
+<tr>
+<th scope="row">目的</th>
+<td>消火活動の補助を行う。</td>
+</tr>
+<tr>
+<th scope="row"> 内容 </th>
+<td>
+<ul>
+<li>● 規定時間内に、指定された作業項目を行う。</li>
+<li>● 作業項目は以下の通り<br />
+  &lt;作業項目&gt;  <br />
+</li>
+</ul>
+<p>
+<span class="TXT-aqua bold">【R5-1】</span>消火設備の扉をあける <br />
+<span class="TXT-aqua bold">【R5-2】</span>ホースをすべて引き出す <br />
+<span class="TXT-aqua bold">【R5-3】</span>ノズルを取り出す <br />
+<span class="TXT-aqua bold">【R5-4】</span>ノズルとホースを接続する <br />
+<span class="TXT-aqua bold">【R5-5】</span>バルブを開ける（通水確認） 
+</p>
+<br />
+
+<div class="zoom"><a href="images/rule/R6/Task_R6_1.jpg"><img src="images/rule/R6/Task_R6_1.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B10" /></a></div>
+
+<div class="zoom"><a href="images/rule/R6/Task_R6_2.jpg"><img src="images/rule/R6/Task_R6_2.jpg" alt="" width="350" height="177" class="gray-frame-02 MG-B10" /></a></div>
+
+<div class="zoom"><a href="images/rule/R6/Task_R6_3.jpg"><img src="images/rule/R6/Task_R6_3.jpg" alt="" width="350" height="177" /></a></div>
+</td>
+</tr>
+<tr>
+<th scope="row"> フィールドの状態、仕様</th>
+<td>
+<ul>
+<li>●消火設備は、「道路トンネル非常用施設設置基準」を基本とする。 </li>
+<li>●消火設備は、トンネル壁面に設置され、扉の引手は1mの高さにある 。</li>
+<li>●扉は、縦開き・錠無し引手。 </li>
+<li>●ホースは蛇腹状に置かれている。 </li>
+<li>●ノズルとホースは、壁面側に別々に取り付けられている。 </li>
+<li>●バルブは、消火設備内に設置され、横向きに取り付けられている。 <br />
+<br />
+</li>
+</ul>
+<p align="left"><span class="TXT-RED">＜参照＞ </span><br />
+<img src="images/rule/R6/shokasen-01.png" alt="" width="275" height="218" class="imgL" /><img src="images/rule/R6/shokasen-02.jpg" alt="" width="275" height="218" />
+</p></td>
+</tr>
+<tr>
+<th scope="row">タスクの達成</th>
+<td>作業項目【R5-1】～【R5-5】 のいずれか、または全てを実施しゴールまで移動。 </td>
+</tr>
+<tr>
+<th scope="row">得点</th>
+<td><div class="maru-no">
+<ol>
+<li><span>●</span>達成項目により得点。 </li>
+<li><span>●</span>すべての達成項目を以下の手順により達成した場合のみ、タイムに応じて加点する。（ボーナスポイント）。 </li>
+</ol>
+</div>
+<p class="MG-T15"><span class="bold">作業手順</span><br />
+【R5-1】<br />
+　　↓<br />
+{【R5-2】→  【R5-3】 }　or　{【R5-3】→  【R5-2】}<br />
+　　↓<br />
+【R5-4】<br />
+　　↓<br />
+【R5-5】</p></td>
+</tr>
+</table>
+<div id="r3"></div> 
+</div><!--section-->
+
+
+
+
+
+</div><!-- / #main -->
+
+
+
+
+<div id="sub">
+<div class="alpha MG-B10"><a href="https://www.facebook.com/jvrcorg" target="_blank"><img src="images/facebook_ja.png" width="176" height="145" alt="facebook-JVRC" /></a></div>
+
+<div class="alpha"><a href="https://jvrc.github.io/bbs/light.cgi" target="_blank"><img src="images/forum.png" width="176" height="135" alt="JVRC情報交換フォーラム" /></a></div>
+
+
+<h3>ルール</h3>
+<ul>
+<li><a href="#r1">１．はじめに<!--：JVRC競技タスク開発の背景--></a></li>
+<li><a href="#r2">２．シナリオ</a></li>
+<li><a href="#r3">３．等価タスク</a></li>
+<li><a href="#r4">４．競技タスク</a></li>
+<li><a href="#r4-1-1">4-1 平常時のタスク<br />タスク O1：目視検査</a></li>
+<li><a href="#r4-1-2">タスク O2：打音検査</a></li>
+<!--<li><a href="#r4-2-1">4-2 災害時のタスク<br />タスク R1：長距離移動</a></li>-->
+<li><a href="#r4-2-1">タスク R1：車両調査</a></li>
+<li><a href="#r4-2-2">タスク R2：障害走破</a></li>
+<li><a href="#r4-2-3">タスク R3：道具を使用した車両調査</a></li>
+<li><a href="#r4-2-4">タスク R4：経路確保</a></li>
+<li><a href="#r4-2-5">タスク R5：消火活動の補助</a></li>
+</ul>
+
+
+</div><!-- / #sub -->
+
+</div><!-- / #contents -->
+
+
+<div class="pageTop alpha">
+<a href="#"><img src="images/go-top.png" alt="トップへ" width="88" height="38" /></a></div>
+
+<div id="footer">
+<div class="sponsor alpha">主催：<a href="http://www.nedo.go.jp/" target="_blank"><img src="images/nedo-logo.png" alt="国立研究開発法人　新エネルギー・産業技術総合開発機構" width="60" height="31"/></a>　国立研究開発法人　新エネルギー・産業技術総合開発機構 　　　　共催：<a href="http://www.meti.go.jp/" target="_blank"><img src="images/keizai-logo.png" alt="経済産業省" width="111" height="33" /></a>
+</div>
+<div class="copyright">Copyright &copy; 2015 Japan Virtual Robotics Challenge. All Rights Reserved.</div>
+<!-- / #footer --></div>
+
+<!-- / #page --></div>
+
+</body>
+</html>

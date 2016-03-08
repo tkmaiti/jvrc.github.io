@@ -1,0 +1,6 @@
+#CGIフォーム空行対策　試し2015/03/20
+User-agent: *
+Disallow: /ssl/
+Disallow: /en/ssl/
+Disallow: /humanoid/
+Disallow: /en/humanoid/

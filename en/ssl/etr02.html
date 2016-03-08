@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+<title>Japan Virtual Robotics Challenge(JVRC)</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="keywords" content="Japan Virtual Robotics Challenge,JVRC,NEDO," />
+<meta name="description" content="'Japan Virtual Robotics Challenge' (JVRC for short) is a competition of disaster response robots by computer simulations. It will be held as a part of 'R & D project on Disaster-response Robots' by New Energy and Industrial Technology Development Organization (NEDO)." />
+
+<link rel="shortcut icon" href="../images/favicon.ico" />
+
+<link href="../../css/import.css" rel="stylesheet" type="text/css" media="all" />
+<link href="style_info.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../js/base.js"></script>
+
+
+</head>
+<body>
+
+<div id="page">
+
+<div id="header">
+<div class="imgArea">
+<a href="../index.html"><img src="../../images/en/img-main.png" alt="" width="1115" height="313" /></a>
+
+<div class="english"><a href="https://jvrc.org/ssl/contact.html"><img src="../../images/ja_flag.png" alt="Japan" width="22" height="14" />Japanese</a>
+</div><!--/ english-->
+
+</div><!-- / #imgArea-en -->
+</div><!-- / #header -->
+
+
+<div id="navi">
+<div id="naviArea">
+<ul id="gNav">
+<li><a href="../index.html">TOP</a></li>
+<li><a href="../rule.html">Rule</a></li>
+<li><a href="http://jvrc.github.com/tutorials/html/index.html" target="_blank">Tutorial</a></li>
+<li><a href="../team.html">Team</a></li>
+<li><a href="../download.html">Download</a></li>
+<li><a href="../result.html">Result</a></li>
+<li class="current-page"><a href="https://jvrc.org/en/ssl/etr.html"><img src="../../images/sanka-icon.png" alt="" width="26" height="25" />Application</a></li>
+<li><a href="https://jvrc.org/en/ssl/contact.html"><img src="../../images/inquiry-icon.png" alt="" width="22" height="16" /> Contact Us</a></li>
+</ul>
+<!-- / #naviArea --></div>
+<!-- / #navi --></div>
+
+
+<div id="contents" class="clearfix">
+<div id="main2">
+
+
+<!--form ここから-->
+
+<h2>Application</h2><br />
+<!--<br />
+3月下旬より参加申し込み開始予定。
+<br />
+-->
+
+<p class="need2">
+<span class="bold red f-14">Closing Date　Monday, May 11, 2015　17：00</span></p>
+<br />
+
+
+<div class="need2"><span class="need">Mandatory</span><span class="red"> Please fill out the mandatory items in the following form and submit.</span><br /> 
+
+<!--<span class="red t-center">事前参加申込は終了致しました。</span><br /> 
+<span class="red t-center">受付は終了致しました。</span><br /><br /> --></div>
+
+<form method=post action="etr.cgi" name="thisform" onSubmit='return checkForm()'>                      
+<table class="form" summary="お申込み">
+<tr>
+<th nowrap="nowrap" class="t_top">Name</th>
+<td width="6%" class="aqua"><div class="need">Mandatory</div></td>
+<td class="t_top">
+<input type="text" name="name" size="30" maxlength="30" />
+　Example：John Smith</td>
+</tr>
+<!--<tr>
+<th nowrap="nowrap">フリガナ</th>
+<td><div class="need">Mandatory</div></td>
+<td>
+<input type="text" name="kana" size="30" maxlength="30" />
+　入力例：ヤマダ　タロウ</td>
+</tr>-->
+<tr>
+<th nowrap="nowrap">Department/Company</th>
+<td>　</td>
+<td>
+<input type="text" name="kinmu" size="30" />
+<br />
+Example：The future scientific industry corporation</td>
+</tr>
+<tr>
+<th nowrap="nowrap">Title</th>
+<td>&nbsp;</td>
+<td><input type="text" name="yakushoku" size="30" /></td>
+</tr>
+<!--<tr>
+<th nowrap="nowrap">郵便番号</th>
+<td>&nbsp;</td>
+<td>
+<input type="text" name="yubin" size="10" />（例 123-4567　半角数字で）</td>
+</tr>-->
+<tr>
+<th nowrap="nowrap">Country</th>
+<td>&nbsp;</td>
+<td><input type="text" name="todoufuken" size="30" />
+<!--<select name="todoufuken">
+<option value="">都道府県</option>
+<option value="北海道">北海道</option>
+<option value="青森県">青森県</option>
+<option value="岩手県">岩手県</option>
+<option value="宮城県">宮城県</option>
+<option value="秋田県">秋田県</option>
+<option value="山形県">山形県</option>
+<option value="福島県">福島県</option>
+<option value="茨城県">茨城県</option>
+<option value="栃木県">栃木県</option>
+<option value="群馬県">群馬県</option>
+<option value="埼玉県">埼玉県</option>
+<option value="千葉県">千葉県</option>
+<option value="東京都">東京都</option>
+<option value="神奈川県">神奈川県</option>
+<option value="新潟県">新潟県</option>
+<option value="富山県">富山県</option>
+<option value="石川県">石川県</option>
+<option value="福井県">福井県</option>
+<option value="山梨県">山梨県</option>
+<option value="長野県">長野県</option>
+<option value="岐阜県">岐阜県</option>
+<option value="静岡県">静岡県</option>
+<option value="愛知県">愛知県</option>
+<option value="三重県">三重県</option>
+<option value="滋賀県">滋賀県</option>
+<option value="京都府">京都府</option>
+<option value="大阪府">大阪府</option>
+<option value="兵庫県">兵庫県</option>
+<option value="奈良県">奈良県</option>
+<option value="和歌山県">和歌山県</option>
+<option value="鳥取県">鳥取県</option>
+<option value="島根県">島根県</option>
+<option value="岡山県">岡山県</option>
+<option value="広島県">広島県</option>
+<option value="山口県">山口県</option>
+<option value="徳島県">徳島県</option>
+<option value="香川県">香川県</option>
+<option value="愛媛県">愛媛県</option>
+<option value="高知県">高知県</option>
+<option value="福岡県">福岡県</option>
+<option value="佐賀県">佐賀県</option>
+<option value="長崎県">長崎県</option>
+<option value="熊本県">熊本県</option>
+<option value="大分県">大分県</option>
+<option value="宮崎県">宮崎県</option>
+<option value="鹿児島県">鹿児島県</option>
+<option value="沖縄県">沖縄県</option>
+</select>-->
+</td>
+</tr>
+<tr>
+<th nowrap="nowrap">Address１</th>
+<td>&nbsp;</td>
+<td>
+<input type="text" name="jusho_1" size="60" /></td>
+</tr>
+<tr>
+<th nowrap="nowrap">Address２</th>
+<td>&nbsp;</td>
+<td>
+<input type="text" name="jusho_2" size="60" /></td>
+</tr>
+<tr>
+<th nowrap="nowrap">Telephone  Number</th>
+<td>&nbsp;</td>
+<td>
+<input type="text" name="tel" size="30" />
+<!--　  Example：   03-3238-7681　半角数字で--></td>
+</tr>
+<tr>
+<th nowrap="nowrap">FAX</th>
+<td>　</td>
+<td>
+<input type="text" name="fax" size="30" />
+<!--　  Example：   03-3238-7695　半角数字で--></td>
+</tr>
+<tr>
+<th nowrap="nowrap">E-mail  address</th>
+<td><div class="need">Mandatory</div></td>
+<td>
+<input type="text" name="mail" size="50" maxlength="55" />
+　Example：foo@example.com</td>
+</tr>
+<tr>
+<th nowrap="nowrap">E-mail address<br />(to confirm)</th>
+<td><div class="need">Mandatory</div></td>
+<td><input type="text" name="mail1" size="50" maxlength="55" />
+<br />
+A confirmation e-mail will be sent automatically to your e-mail address.</td>
+</tr>
+<!--<tr>
+<th nowrap="nowrap">Infomation</th>
+<td><div class="need">Mandatory</div></td>
+<td>Do you like to receive the information from JVRC in the future?<br />
+<label><input type="radio" name="kibou" value="YES" checked="checked" />
+  YES</label>
+　　
+<label><input type="radio" name="kibou" value="NO" />
+  NO</label>
+</td>
+</tr>-->
+</table>
+<p><br />
+</p>
+<div class="t-center"><input type=submit value="Submit"><br />
+</div>
+</form>
+<div class="line">　</div>
+
+<div>
+<dl class="sign" id="ssl">
+
+<dt style="height:50px;"><span id="ss_img_wrapper_100-50_flash_ja">
+<script language="JavaScript" TYPE="text/javascript" src="https://trusted-web-seal.cybertrust.ne.jp/seal/getScript?host_name=jvrc.org&type=48&svc=4&cmid=2012706"></script><br />
+</span></dt>
+
+<dd style="height:50px;">
+*Personal customer information will only be used for our management. All of our site and transactions are based on SSL protection.
+</dd>
+
+</dl>
+</div>
+
+
+
+
+
+<SCRIPT language="javascript">
+<!--
+function checkForm(){
+	if(document.thisform.name.value==''){
+		alert('Please fill in Name');
+		document.thisform.name.focus();
+		return false;
+	}
+	else if(document.thisform.mail.value==''){
+		alert('Please fill in E-Mail');
+		document.thisform.mail.focus();
+		return false;
+	}
+	else if(document.thisform.mail.value!=document.thisform.mail1.value){
+		alert('Please confirm E-mail');
+		document.thisform.mail.focus();
+		return false;
+	}		
+	else{
+		return true;
+	}
+}
+//-->
+</SCRIPT>
+
+<!--form ここまで-->
+
+
+</div><!--main2-->
+</div><!-- / #contents -->
+
+
+<div class="pageTop alpha">
+<a href="#"><img src="../../images/go-top.png" alt="to TOP" width="88" height="38" /></a></div>
+
+<div id="footer">
+<div class="alpha sponsor2">
+<table>
+<tr>
+<td>
+Organizers：<a href="http://www.nedo.go.jp/english/index.html" target="_blank"><img src="../../images/nedo-logo.png" alt="New Energy and Industrial Technology Development Organization" width="60" height="31"/></a></td>
+<td>New Energy and Industrial Technology <br />
+Development Organization</td>
+<td class="space">&nbsp;</td>
+<td>Co-Organizer：<a href="http://www.meti.go.jp/english/index.html" target="_blank"><img src="../../images/keizai-logo.png" alt="Ministry of Economy, Trade and Industry" width="111" height="33" /></a></td>
+<td>Ministry of Economy, <br />
+Trade and Industry</td>
+</tr>
+</table>
+</div>
+<div class="copyright">Copyright &copy; 2015 Japan Virtual Robotics Challenge. All Rights Reserved.</div>
+<!-- / #footer --></div>
+
+
+<!-- / #page --></div>
+
+</body>
+</html>

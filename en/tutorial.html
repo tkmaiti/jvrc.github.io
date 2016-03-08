@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Japan Virtual Robotics Challenge(JVRC)</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="keywords" content="Japan Virtual Robotics Challenge,JVRC,NEDO," />
+<meta name="description" content="'Japan Virtual Robotics Challenge' (JVRC for short) is a competition of disaster response robots by computer simulations. It will be held as a part of 'R & D project on Disaster-response Robots' by New Energy and Industrial Technology Development Organization (NEDO)." />
+
+<link rel="shortcut icon" href="../images/favicon.ico" />
+
+<link href="../css/import.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+
+
+</head>
+<body>
+
+
+<div id="page">
+
+<div id="header">
+<div class="imgArea">
+<a href="index.html"><img src="../images/en/img-main.png" alt="" width="1115" height="313" /></a>
+
+<div class="english"><a href="../tutorial.html"><img src="../images/ja_flag.png" alt="Japan" width="22" height="14" />Japanese</a>
+</div><!--/ english-->
+
+</div><!-- / #imgArea-en -->
+</div><!-- / #header -->
+
+
+<div id="navi">
+<div id="naviArea">
+<ul id="gNav">
+<li><a href="index.html">TOP</a></li>
+<li><a href="rule.html">Rule</a></li>
+<li class="current-page"><a href="http://jvrc.github.com/tutorials/html/index.html" target="_blank">Tutorial</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="download.html">Download</a></li>
+<li><a href="result.html">Result</a></li>
+<li><a href="https://jvrc.org/en/ssl/etr.html"><img src="../images/sanka-icon.png" alt="" width="26" height="25" />Application</a></li>
+<li><a href="https://jvrc.org/en/ssl/contact.html"><img src="../images/inquiry-icon.png" alt="" width="22" height="16" /> Contact Us</a></li>
+</ul>
+<!-- / #naviArea --></div>
+<!-- / #navi --></div>
+
+
+<div id="contents" class="clearfix">
+<div id="main">
+
+
+<a name="choreonoid-01" id="choreonoid-01"></a>
+<h2>About Robotic Simulator Choreonoid</h2>
+<div class="section2">
+Choreonoid is the integrated open source GUI software for robots.
+It has a kinetics simulation and a choreographic action function as a standard equipment. Also it is also available to put another function.<br />
+It has also an aspect as the GUI application development framework for robots.<br />
+<br />
+<p class="center"><img src="../images/tutorial/choreonoid-img.png" alt="Robotic Simulator Choreonoid" width="680" height="469" /></p>
+<p class="PD-L20">Operation Screen</p>
+<br />
+<p class="center"><img src="../images/tutorial/choreonoid-figure.png" alt="Robotic Simulator Choreonoid" width="680" height="469" class="gray-frame"/></p>
+<p class="PD-L20">Graphic Explanation</p>
+<br />
+</div><!--section-->
+
+
+<a name="choreonoid-02" id="choreonoid-02"></a>
+<h2>Details about Choreonoid as a simulator</h2>
+<div class="section2">
+<table class="t-04">
+<tr>
+<th width="20%" scope="row"><strong>Joint  movement</strong></th>
+<td width="80%">Spin,  direct operation, simple crawler</td>
+</tr>
+<tr>
+<th scope="row"><strong>Sensor  spots</strong></th>
+<td>Force-torque  sensor, gyro, acceleration sensor, camera(including RGB-D), range finder</td>
+</tr>
+<tr>
+<th scope="row"><strong>Light</strong></th>
+<td>Simple  light with OpenGL</td>
+</tr>
+<tr>
+<th scope="row"><strong>Simulation  format</strong></th>
+<td>Closed  link feature</td>
+</tr>
+<tr>
+<th scope="row"><strong>Shape  representation</strong></th>
+<td>Polygonal  representation</td>
+</tr>
+<tr>
+<th scope="row"><strong>Describing  method</strong></th>
+<td>Robot  and environment model are described by VRML97 or COLLADA</td>
+</tr>
+<tr>
+<th scope="row"><strong>Association</strong></th>
+<td>RTM  control system software is available</td>
+</tr>
+<tr>
+<th scope="row"><strong>Other</strong></th>
+<td>No  simulation functions for deformation, under-water, flying</td>
+</tr>
+</table>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-03" id="choreonoid-03"></a>
+<h2>Describing method of model robot</h2>
+<div class="section2">
+<p class="center"><img src="../images/tutorial/choreonoid-program.png" alt="Describing method of model robot" width="680" height="438" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-04" id="choreonoid-04"></a>
+<h2>RT component simulation</h2>
+<div class="section2">
+<p class="center"><img src="../images/tutorial/choreonoid-RT.png" alt="RT component simulation" width="680" height="468" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-05" id="choreonoid-05"></a>
+<h2>Controller and I/O adapter</h2>
+<div class="section2">
+<p class="center"><img src="../images/tutorial/choreonoid-con.png" alt="Controller and I/O adapter" width="680" height="404" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-06" id="choreonoid-06"></a>
+<h2>Description of controller</h2>
+<div class="section2">
+<p class="center"><img src="../images/tutorial/choreonoid-con-pro.png" alt="Description of controller" width="680" height="467" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-07" id="choreonoid-07"></a>
+<h2>Operation Screen of Choreonoid</h2>
+<div class="section2">
+<p class="center"><img src="../images/tutorial/choreonoid-ope.png" alt="Operation Screen of Choreonoid" width="680" height="546" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-08" id="choreonoid-08"></a>
+<h2>RT component format</h2>
+<div class="section2">
+<p class="center"><img src="../images/tutorial/choreonoid-composition.png" alt="RT component format" width="680" height="380" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-09" id="choreonoid-09"></a>
+<h2>RT middleware</h2>
+<div class="section2">
+●It is the development software base to promote the efficiency of robot system formulation.<br />
+●It provides a component framework standardized internationally by OMG. (OpenRTM is the name of implementation.)<br />
+●It accepts any OS, language, central or distributed system flexibly.<br />
+<p class="center"><img src="../images/tutorial/RT-01.png" alt="RT middleware" width="680" height="248" class="gray-frame" /></p>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-10" id="choreonoid-10"></a>
+<h2>Benefits of RT component</h2>
+<div class="section2">
+<table class="t-04">
+<tr>
+<th scope="row"><strong>Reusability  improvement</strong></th>
+<td>It is  available to reuse for various systems.</td>
+</tr>
+<tr>
+<th scope="row"><strong>Diversity  of option</strong></th>
+<td>It is  available to try some components with the same function.</td>
+</tr>
+<tr>
+<th scope="row"><strong>Flexibility  improvement</strong></th>
+<td>It is  available to build various systems with exchange of component format.</td>
+</tr>
+<tr>
+<th scope="row"><strong>Reliability  improvement</strong></th>
+<td>The  reliability improves to test by every component unit.</td>
+</tr>
+<tr>
+<th scope="row"><strong>Robustness  improvement</strong></th>
+<td><p align="left">It is hard to spill over into the whole as the system is divided by  component</p></td>
+</tr>
+</table>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-11" id="choreonoid-11"></a>
+<h2>RTC division and cooperation</h2>
+<div class="section2">
+<p class="center"><img src="../images/tutorial/rtc-cooperation.png" alt="RTC division and cooperation" width="680" height="390" /></p>
+<div class="yellow-stripe2" >The rule of information disclosure is important.</div>
+<br />
+<br />
+</div><!--section-->
+
+
+
+<a name="choreonoid-12" id="choreonoid-12"></a>
+<h2>Tool</h2>
+<div class="section2">
+<table class="t-04 center">
+<tr>
+<td><img src="../images/tutorial/rtc-01.png" alt="" width="321" height="214" /></td>
+<td><img src="../images/tutorial/rtc-02.png" alt="" width="300" height="200" /></td>
+</tr>
+<tr>
+<td align="center">RTCBuilder</td>
+<td align="center">
+RTSystemEditor</td>
+</tr>
+</table>
+<div class="black-stripe24">
+Maintenance of the RTC/RTM integrated development environment</div>
+<br />
+<br />
+</div><!--section-->
+
+
+
+
+</div><!-- / #main -->
+
+<div id="sub">
+<div class="alpha">
+<div class="en-forum"><a href="#">Information Exchange Forum　＞<br />
+<span class=" TXT-L TXT-aqua" style="text-shadow:none;">Coming soon</span></a>
+</div>
+</div>
+
+<div class="alpha MG-T5"><a href="https://www.facebook.com/jvrcorg" target="_blank"><img src="../images/en/facebook_en.png" width="176" height="145" alt="facebook-JVRC" /></a></div>
+
+<h3>Tutorial</h3>
+<ul>
+<li><a href="#choreonoid-01">About Robotic Simulator Choreonoid</a></li>
+<li><a href="#choreonoid-02">Details about Choreonoid as a simulator</a></li>
+<li><a href="#choreonoid-03">Describing method of model robot</a></li>
+<li><a href="#choreonoid-04">RT component simulation</a></li>
+<li><a href="#choreonoid-05">Controller and I/O adapter</a></li>
+<li><a href="#choreonoid-06">Description of controller</a></li>
+<li><a href="#choreonoid-07">Operation Screen of Choreonoid</a></li>
+<li><a href="#choreonoid-08">RT component format</a></li>
+<li><a href="#choreonoid-09">RT middleware</a></li>
+<li><a href="#choreonoid-10">Benefits of RT component</a></li>
+<li><a href="#choreonoid-11">RTC division and cooperation</a></li>
+<li><a href="#choreonoid-12">Tool</a></li>
+<!--<li><a href="#choreonoid-13">応用例（研究用プラットフォーム）</a></li>
+<li><a href="#choreonoid-14">応用例（実応用その他）</a></li>-->
+</ul>
+
+
+</div><!-- / #sub -->
+
+</div><!-- / #contents -->
+
+
+<div class="pageTop alpha">
+<a href="#"><img src="../images/go-top.png" alt="to TOP" width="88" height="38" /></a></div>
+
+<div id="footer">
+<div class="alpha sponsor2">
+<table>
+<tr>
+<td>
+Organizers：<a href="http://www.nedo.go.jp/english/index.html" target="_blank"><img src="../images/nedo-logo.png" alt="New Energy and Industrial Technology Development Organization" width="60" height="31"/></a></td>
+<td>New Energy and Industrial Technology <br />
+Development Organization</td>
+<td class="space">&nbsp;</td>
+<td>Co-Organizer：<a href="http://www.meti.go.jp/english/index.html" target="_blank"><img src="../images/keizai-logo.png" alt="Ministry of Economy, Trade and Industry" width="111" height="33" /></a></td>
+<td>Ministry of Economy, <br />
+Trade and Industry</td>
+</tr>
+</table>
+</div>
+<div class="copyright">Copyright &copy; 2015 Japan Virtual Robotics Challenge. All Rights Reserved.</div>
+<!-- / #footer --></div>
+
+<!-- / #page --></div>
+
+</body>
+</html>

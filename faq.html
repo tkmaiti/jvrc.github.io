@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ジャパンバーチャルロボティクスチャレンジ｜よくあるご質問(FAQ)</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="keywords" content="ジャパンバーチャルロボティクスチャレンジ,Japan Virtual Robotics Challenge,JVRC,国立研究開発法人新エネルギー・産業技術総合開発機構,NEDO," />
+<meta name="description" content="「ジャパンバーチャルロボティクスチャレンジ（Japan Virtual Robotics Challenge）」（略称JVRC）は国立研究開発法人新エネルギー・産業技術総合開発機構 (NEDO) が実施中の「環境・医療分野の国際研究開発・実証プロジェクト／ロボット分野の国際研究開発・実証事業／災害対応ロボット研究開発（アメリカ）」プロジェクトの一環として実施する災害対応ロボットのコンピュータシミュレーションによる競技会です。" />
+
+<link rel="shortcut icon" href="images/favicon.ico" />
+
+<link href="./css/import.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+
+<!--アコーディオンメニュー-->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+　$("#faq .question").on("click", function() {
+　　$(this).next().slideToggle(200);
+　});
+});
+</script>
+
+</head>
+<body>
+
+
+<div id="page">
+
+<div id="header">
+<div class="imgArea">
+<a href="http://jvrc.github.io/index.html">
+<img src="images/img-main.png" alt="メインイメージ" width="1115" height="313" /></a>
+
+<div class="english"><a href="en/faq.html"><img src="images/en_flag.png" alt="english" width="21" height="14" />English</a>
+</div><!--/ english-->
+
+</div><!-- / #imgArea -->
+</div><!-- / #header -->
+
+
+<div id="navi">
+<ul id="dropmenu">
+<li><a href="http://jvrc.github.io/index.html">TOP&nbsp;<img src="images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="about.html">ＪＶＲＣについて</a></li>
+  </ul>
+</li>
+<li><a href="rule.html">競技ルール&nbsp;<img src="images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="tech-guide.html">JVRCテクニカルガイド</a></li>
+  </ul>
+</li>
+<li><a href="http://jvrc.github.com/tutorials/html-ja/index.html" target="_blank">チュートリアル</a></li>
+<li><a href="team.html">チーム紹介</a></li>
+<li><a href="download.html">ダウンロード</a></li>
+<li><a href="result.html">進行状況・結果</a></li>
+<li class="current-page"><a href="faq.html">よくあるご質問(FAQ)</a></li>
+<li><a href="https://jvrc.github.io/ssl/contact.html"><img src="images/inquiry-icon.png" alt="" width="22" height="16" />&nbsp;お問い合わせ&nbsp;<img src="images/sankaku.png" alt="" width="8" height="6" /></a>
+  <ul>
+  <li><a href="https://jvrc.github.io/ssl/etr.html"><img src="images/sanka-icon.png" alt="" width="26" height="21" />&nbsp;参加申込み</a></li>
+  </ul>
+</li>
+</ul>
+<!-- / #navi --></div>
+
+
+<div id="faq01"></div>
+<div id="contents" class="clearfix">
+<div id="main">
+
+<h2>よくあるご質問(FAQ)&nbsp;&nbsp;<span class="f-12">回答は質問をクリックすると見られます</span></h2>
+<div class="section">
+<h6>1. 操縦に関して</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　オペレータはカメラ等センサから得られる情報のみで操作するのか、それともシミュレータの俯瞰画像も見られるのでしょうか？</div>
+<div class="answer">オペレータはカメラ等センサから得られる情報のみで操作します。オペレーターはシミュレータの俯瞰画像はみられません。</div>
+</div><!--/faq-->
+<div id="faq02"></div>
+<br /><br />
+
+
+<h6>2. ロボットモデルについて</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　ロボットモデルは用意したものを使うべきでしょうか？ 独自のロボットモデルを使うと、非現実的ではあるが、タスクには非常に有利というものが用意できてしまう気がします。</div>
+<div class="answer">ロボットモデルは用意したものでも、独自のものでもかまいません。非現実的なロボットは出場できません。ロボットの現実可能性は書類審査等で判断します。</div>
+
+<!--Q2-->
+<div class="question"><span>Q</span>　センサ等は好きな場所に好きなだけ追加していいのでしょうか？</div>
+<div class="answer">実現可能であれば，センサ等は好きな場所に好きなだけ追加してかまいません。ただし、シミュレーションの計算速度にも影響を与えますので、その点を考慮頂ければと思います。</div>
+
+</div><!--/faq-->
+<div id="faq03"></div>
+<br /><br />
+
+
+
+<h6>3. コンテストについて</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　フィールド等のモデルは事前に配布されるのでしょうか？されるとしたらいつぐらいでしょうか？</div>
+<div class="answer">フィールド等のモデルは事前に配布します。配布時期は別途連絡します。</div>
+
+<!--Q2-->
+<div class="question"><span>Q</span>　QRコードの仕様，読み取りソフト等は配布されるのでしょうか？</div>
+<div class="answer">QRコードの仕様は別途連絡します。QRコードの読み取りソフトは配布されません。</div>
+    
+<!--Q3-->
+<div class="question"><span>Q</span>　競技で点数となる時間は実時間で計測でしょうか、それともシミュレーション時間で計測でしょうか？</div>
+<div class="answer">競技で点数となる時間はシミュレーション時間です。</div>
+
+</div><!--/faq-->
+<div id="faq04"></div>
+<br /><br />
+
+
+
+<h6>4. 配布ソフトウェアについて</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　どのようなモジュールは配布されて、どのようなモジュールは参加者が作る想定でしょうか？</div>
+<div class="answer">配布を行うのはシミュレーションソフトウェア、ロボット及びタスク環境のモデルです。ロボットを制御するためのソフトウェアは全て参加者の方にご用意頂きます。
+</div>
+
+</div><!--/faq-->
+<div id="faq05"></div>
+<br /><br />
+
+
+<h6>5. タスクO1について</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　ターゲットの個数は事前にわかりますか？</div>
+<div class="answer">ターゲットの個数は事前に公開します。公開時期は別途連絡します。</div>
+
+<!--Q2-->
+<div class="question"><span>Q</span>　場所は原点基準で報告すればよいのでしょうか？</div>
+<div class="answer">場所は原点基準で報告してください。</div>
+
+</div><!--/faq-->
+<div id="faq06"></div>
+<br /><br />
+
+
+<h6>6. タスクO2について</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　ロボットは天井への足場に乗った状態からスタートすると思えばいいでしょうか？</div>
+<div class="answer">ロボットは天井への足場に乗った状態からスタートします。</div>
+
+</div><!--/faq-->
+<div id="faq07"></div>
+<br /><br />
+
+
+<h6>7. タスクR1について</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　ロボットが搭乗可能な車両のインターフェイスはアクセル，ブレーキ，ハンドルのようなものと想定すればよいでしょうか？</div>
+<div class="answer">その通りです。</div>
+
+</div><!--/faq-->
+<div id="faq08"></div>
+<br /><br />
+
+
+<h6>8. タスクR2について</h6>
+<div id="faq">
+<!--Q1-->
+<div class="question"><span>Q</span>　フィールドの状態、仕様はM,L,s,uすべての組み合わせを行うのでしょうか？</div>
+<div class="answer">競技では、フィールドの状態、仕様はM,L,s,u
+のいずれかの組み合わせで実施されます。どの組合せで実施するかは別途連絡します。 </div>
+
+<!--Q2-->
+<div class="question"><span>Q</span>　定性的な車両の状態がわかる3次元情報を提出するとは、3次元再構成したメッシュとかのことでしょうか？</div>
+<div class="answer">定性的な車両の状態がわかる3次元情報は、人間（審判）が理解できる情報であればかまいません。適切な密度で3次元再構成したメッシュ情報でもかまいません。</div>
+
+</div><!--/faq-->
+<div id="faq09"></div>
+<br /><br />
+
+
+<h6>9. タスクR4について</h6>
+<div id="faq">
+<div class="question"><span>Q</span>　スプレッダーのスイッチなどの仕様は事前にわかりますか？</div>
+<div class="answer">スプレッダーのスイッチなどの仕様は事前に公表します。公表する時期は別途連絡します。</div>
+</div><!--/faq-->
+
+</div><!--section-->
+</div><!-- / #main -->
+
+
+
+
+<div id="sub">
+<div class="alpha MG-B10"><a href="https://www.facebook.com/jvrcorg" target="_blank"><img src="images/facebook_ja.png" width="176" height="145" alt="facebook-JVRC" /></a></div>
+
+<div class="alpha"><a href="https://jvrc.github.io/bbs/light.cgi" target="_blank"><img src="images/forum.png" width="176" height="135" alt="JVRC情報交換フォーラム" /></a></div>
+
+
+<h3><span class="ls-1">よくある</span>質問(FAQ)</h3>
+<ul>
+<li><a href="#faq01">1. 操縦に関して</a></li>
+<li><a href="#faq02">2. ロボットモデルについて</a></li>
+<li><a href="#faq03">3. コンテストについて</a></li>
+<li><a href="#faq04">4. 配布ソフトウェアについて</a></li>
+<li><a href="#faq05">5. タスクO1について</a></li>
+<li><a href="#faq06">6. タスクO2について</a></li>
+<li><a href="#faq07">7. タスクR1について</a></li>
+<li><a href="#faq08">8. タスクR2について</a></li>
+<li><a href="#faq09">9. タスクR4について</a></li>
+</ul>
+</div><!-- / #sub -->
+
+</div><!-- / #contents -->
+
+
+<div class="pageTop alpha">
+<a href="#"><img src="images/go-top.png" alt="トップへ" width="88" height="38" /></a></div>
+
+<div id="footer">
+<div class="sponsor alpha">主催：<a href="http://www.nedo.go.jp/" target="_blank"><img src="images/nedo-logo.png" alt="国立研究開発法人　新エネルギー・産業技術総合開発機構" width="60" height="31"/></a>　国立研究開発法人　新エネルギー・産業技術総合開発機構 　　　　共催：<a href="http://www.meti.go.jp/" target="_blank"><img src="images/keizai-logo.png" alt="経済産業省" width="111" height="33" /></a>
+</div>
+<div class="copyright">Copyright &copy; 2015 Japan Virtual Robotics Challenge. All Rights Reserved.</div>
+<!-- / #footer --></div>
+
+<!-- / #page --></div>
+
+</body>
+</html>

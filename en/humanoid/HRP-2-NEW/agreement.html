@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=Shift_JIS" />
+<title>Japan Virtual Robotics Challenge(JVRC)</title>
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta name="keywords" content="ジャパンバーチャルロボティクスチャレンジ,Japan Virtual Robotics Challenge,JVRC,国立研究開発法人新エネルギー・産業技術総合開発機構,NEDO," />
+<meta name="description" content="「ジャパンバーチャルロボティクスチャレンジ（Japan Virtual Robotics Challenge）」（略称JVRC）は国立研究開発法人新エネルギー・産業技術総合開発機構 (NEDO) が実施中の「環境・医療分野の国際研究開発・実証プロジェクト／ロボット分野の国際研究開発・実証事業／災害対応ロボット研究開発（アメリカ）」プロジェクトの一環として実施する災害対応ロボットのコンピュータシミュレーションによる競技会です。" />
+
+<link rel="shortcut icon" href="../../../images/favicon.ico" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+
+<link href="../../../css/import.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../../../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../../js/base.js"></script>
+<link href="style_agreement.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+
+<div id="page">
+
+<div id="header">
+<div class="imgArea">
+<a href="http://jvrc.org/index.html">
+<img src="../../../images/en/img-main.png" alt="メインイメージ" width="1115" height="313" /></a>
+
+<div class="english"><a href="https://jvrc.org/download.html"><img src="../../../images/ja_flag.png" alt="Japan" width="21" height="14" />Japanese</a>
+</div><!--/ english-->
+
+</div><!-- / #imgArea -->
+</div><!-- / #header -->
+
+
+<div id="navi">
+<ul id="dropmenu-en">
+<li><a href="http://jvrc.org/en/index.html">TOP&nbsp;<img src="../../../images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="http://jvrc.org/en/about.html">About JVRC</a></li>
+  </ul>
+</li>
+<li><a href="http://jvrc.org/en/rule.html">Rule&nbsp;<img src="../../../images/sankaku.png" alt="" width="8" height="6"/></a>
+  <ul class="mainNav">
+  <li><a href="http://jvrc.org/en/tech-guide.html">Technical Guide</a></li>
+  </ul>
+</li>
+<li><a href="http://jvrc.github.com/tutorials/html/index.html" target="_blank">Tutorial</a></li>
+<li><a href="http://jvrc.org/en/team.html">Team</a></li>
+<li class="current-page"><a href="http://jvrc.org/en/download.html">Download</a></li>
+<li><a href="http://jvrc.org/en/result.html">Result</a></li>
+<li><a href="http://jvrc.org/en/faq.html">FAQs</a></li>
+<li><a href="https://jvrc.org/en/ssl/contact.html"><img src="../../../images/inquiry-icon.png" alt="" width="22" height="16" />&nbsp;Contact Us&nbsp;<img src="../../../images/sankaku.png" alt="" width="8" height="6" /></a>
+  <ul>
+  <li><a href="https://jvrc.org/en/ssl/etr.html"><img src="../../../images/sanka-icon.png" alt="" width="26" height="21" />&nbsp;Application</a></li>
+  </ul>
+</li>
+</ul>
+<!-- / #navi --></div>
+
+
+<div id="contents" class="clearfix">
+<div id="main2">
+
+<h2>HRP-2kai Download application</h2>
+<div class="section">
+<p>If you wish to download, please fill out the form below.<br />
+<br />
+</p>
+<p><span class="red">Notice: Signing an NDA (Non-Disclosure Agreement) with the robot builder, Kawada Technologies, Inc.
+is required to download the robot model. Note that only legal entities can sign the NDA.</span><br />
+<br />
+<b>After you agree with the NDA of Kawada Technologies, Inc., you will receive the model file. The following is a detail.<br /></b>
+<br />
+* Please fill the following form and submit.<br />
+* You will receive a confirmation E-mail. Please wait for a contact from Kawada Technologies, Inc.<br />
+* If you can agree with the NDA, sign the NDA and let us (dl-request@jvrc.org) know.<br />
+* You will receive the model file.<br />
+<br />
+Your personal information will be a reference for usage of download, it is not issued to the outside.</p>
+</div>
+
+
+
+<form action="https://jvrc.org/en/humanoid/HRP-2-NEW/agreement.cgi" method="post" name="thisform" id="thisform" onsubmit='return checkForm()' >
+                  
+<table class="form" summary="Download application">
+<tr>
+<th width="20%" nowrap="nowrap" class="t_top">Name</th>
+<td width="9%" class="aqua"><div class="need">Mandatory</div></td>
+<td width="71%" class="t_top">
+<input class="aform-text" name="name" type="text" value="" size="40" title="Please input Name" validate_max_length=""/><br />
+Example : John Smith 
+</td>
+</tr>
+<tr>
+<th nowrap="nowrap">Department/company</th>
+<td><div class="need">Mandatory</div></td>
+<td>
+<input class="aform-text" name="shozoku" type="text" value="" size="40" title="Please input Department/Company" validate_max_length=""/>
+<br />
+Example : The future scientific industry corporation</td>
+</tr>
+<tr>
+<th nowrap="nowrap">E-mail address</th>
+<td><div class="need">Mandatory</div></td>
+<td>
+<input class="aform-email hankaku validate-email" name="mail" type="text" value="" size="40" title="Please input E-mail address" validate_max_length=""/>
+<br />
+example : foo@example.com</td>
+</tr>
+</table>
+
+<p><br />
+</p>
+<div class="t-center">
+<input id="aform_btn_confirm_3" type="submit" name="Submit" value=" Submit " /><br />
+<script language="JavaScript" TYPE="text/javascript" src="https://trusted-web-seal.cybertrust.ne.jp/seal/getScript?host_name=jvrc.org&type=42&svc=5&cmid=2012706"></script>
+</div>
+
+</form>
+
+<div class="line">　</div>
+
+<div>
+<dl class="sign" id="ssl">
+
+<dt style="height:50px;"><span id="ss_img_wrapper_100-50_flash_ja">
+<script language="JavaScript" TYPE="text/javascript" src="https://trusted-web-seal.cybertrust.ne.jp/seal/getScript?host_name=jvrc.org&type=48&svc=4&cmid=2012706"></script><br />
+</span></dt>
+
+<dd style="height:50px;">*The personal information you provide in this downroad is strictly managed and used only for this event.
+</dd>
+
+</dl>
+</div>
+
+<SCRIPT language="javascript">
+
+function checkForm(){
+	if(document.thisform.name.value==''){
+		alert('Please input Name');
+		document.thisform.name.focus();
+		return false;
+	}
+	else if(jQuery.trim(document.thisform.name.value)==''){
+		alert('お名前が空白です。入力し直してください');
+		document.thisform.name.focus();
+		return false;
+	}
+	else if(document.thisform.shozoku.value==''){
+		alert('Please input Department/Company');
+		document.thisform.mail.focus();
+		return false;
+	}
+	else if(jQuery.trim(document.thisform.shozoku.value)==''){
+		alert('所属先（勤務先）が空白です。入力し直してください');
+		document.thisform.shozoku.focus();
+		return false;
+	}
+	else if(document.thisform.mail.value==''){
+		alert('Please input E-mail address');
+		document.thisform.mail.focus();
+		return false;
+	}	
+	else if (document.thisform.mail.value.indexOf("@") == -1 ) {
+		alert("Please confirm E-mail") ;
+		document.thisform.mail.focus();
+		return false ;
+	}
+	else if(checkEmail()){
+		alert("Please confirm E-mail");
+		document.thisform.mail.focus();
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+</SCRIPT>
+
+
+</div><!--main2-->
+</div><!-- / #contents -->
+
+<div class="pageTop alpha">
+<a href="#"><img src="../../../images/go-top.png" alt="To Page top" width="88" height="38" /></a></div>
+
+
+<div id="footer">
+<div class="alpha sponsor2">
+<table>
+<tr>
+<td>
+Organizers：<a href="http://www.nedo.go.jp/english/index.html" target="_blank"><img src="../../../images/nedo-logo.png" alt="New Energy and Industrial Technology Development Organization" width="60" height="31"/></a></td>
+<td>New Energy and Industrial Technology <br />
+Development Organization</td>
+<td class="space">&nbsp;</td>
+<td>Co-Organizer：<a href="http://www.meti.go.jp/english/index.html" target="_blank"><img src="../../../images/keizai-logo.png" alt="Ministry of Economy, Trade and Industry" width="111" height="33" /></a></td>
+<td>Ministry of Economy, <br />
+Trade and Industry</td>
+</tr>
+</table>
+</div>
+<div class="copyright">Copyright &copy; 2015 Japan Virtual Robotics Challenge. All Rights Reserved.</div>
+<!-- / #footer --></div>
+
+
+<!-- / #page --></div>
+
+
+</body>
+</html>
